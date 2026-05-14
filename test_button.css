@@ -1,0 +1,286 @@
+/* ボタン*/
+
+.button-00 {
+    position: relative;
+    display: inline-block;
+    height: 100px; width: 100px;
+    margin: 2px; padding: 0;
+    border: none; border-radius: 50px;
+    color: #fff;
+    font-size: 20px; font-weight: 700;
+    line-height: 0; letter-spacing: .01em;
+    overflow: hidden;
+    }
+
+
+
+.button-01 {
+    position: relative;
+    display: inline-block;
+    height: 50px; width: 100px;
+    margin: 5px; padding: 0;
+    border: none; border-radius: 5px;
+    background: #5abae6;
+    color: #fff;
+    font-size: 15px; font-weight: 700;
+    line-height: 1; letter-spacing: .01em;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color .25s ease;
+    }
+
+.button-01 > span { position: relative; z-index: 1; }
+  
+/* 左→右 スライドインする面 */
+.button-01::before {
+    content:"";
+    position:absolute;
+    inset:0;
+    background:#f8db55;
+    transform: translateX(-100%); /* 初期は左の外 */
+    transition: transform .35s ease;
+    }
+  
+.button-01:hover::before,
+.button-01:focus-visible::before {
+    transform: translateX(0);     /* ホバーで全面に広がる */
+    }
+.button-01:hover,
+.button-01:focus-visible {
+    color:#5abae6;
+    outline:none;
+    }
+
+
+
+.button-02 {
+    position: relative;
+    display: inline-block;
+    height: 50px; width: 100px;
+    margin: 5px; padding: 0;
+    background: #5abae6; 
+    color:#fff;
+    border: none; border-radius: 5px 20px;
+    font-size: 15px; font-weight:700;
+    line-height: 1; letter-spacing: .01em; 
+    min-height: 44px; min-inline-size:12ch;
+    cursor:pointer;
+    }
+  
+/* 外周にぴったり重ねる：inset:0 / border-radius:inherit がポイント */
+.button-02::after {
+    content:""; position:absolute; inset:0;
+    border: 4px solid #f8db55; border-radius: inherit;
+    opacity: 0; transform: scale(.96);          /* ほんの少し縮めて → 等倍へ */
+    transition: opacity .35s ease, transform .35s ease;
+    pointer-events: none;                        /* クリックを邪魔しない */
+    }
+  
+.button-02:hover::after,
+.button-02:focus-visible::after {
+    opacity: 1; transform: scale(1);
+    }
+.button-02:focus-visible { outline:none; }
+
+
+
+.button-03 {
+    display: inline-block;
+    height: 50px; width: 100px;
+    margin: 5px; padding: 0;   
+    border: none; border-radius: 100px;     
+    background: #5abae6;
+    color: #fff;
+    font-size: 15px; font-weight: 700;
+    line-height: 1; letter-spacing: 0.01em;
+ 
+    /* アクセシビリティ */
+    min-height: 44px; min-inline-size: 12ch;
+  
+    /* アニメーション */
+    cursor: pointer;
+    transform: scale(1);
+    transition: color .25s ease, background .35s ease, transform .25s ease;
+    }
+  
+.button-03 > span {
+    position: relative;
+    z-index: 1;
+    }
+  
+.button-03:hover,
+.button-03:focus-visible {
+    background: linear-gradient(45deg, #5abae6 0%, #f8db55 100%);
+    color: #fff; /* 反転 */
+    transform: scale(1.06); /* ふわっと拡大 */
+    outline: none;
+    }
+
+
+
+.button-05 {
+    position: relative;
+    display: inline-block;
+    height: 50px; width: 100px;
+    margin: 5px; padding: 0; /* 右側を少し広めに(矢印のスペース) */
+    border: 0px solid #f8db55; border-radius: 5px 25px 25px 5px;
+    background: #5abae6; color:#fff;
+    font-size: 15px; font-weight: 700;
+    line-height: 1; letter-spacing: .01em;
+    min-height: 44px; min-inline-size: 12ch;
+    cursor: pointer;
+    transition: background .3s ease, color .3s ease, border-color .3s ease;
+    }
+.button-05 > span { position: relative; z-index: 1;}
+  
+/* 矢印アイコン(→)が右からスライドイン */
+.button-05::after {
+    content: "→";
+    position: absolute;
+    right: 16px; top: 50%; transform: translateY(-50%) translateX(-6px);
+    opacity: 0;
+    transition: transform .25s ease, opacity .25s ease, color .25s ease;
+    color: #f8db55; /* 初期は枠色に合わせて控えめ */
+    }
+  
+.button-05:hover,
+.button-05:focus-visible {
+    background: #f8db55; /* ホバーでターコイズ面に */
+    color: #5abae6; /* 文字は白へ */
+    border-color: #f8db55;
+    outline: none;
+    }
+.button-05:hover::after,
+.button-05:focus-visible::after {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+    color: #5abae6; /* 背景が濃いので矢印も白に */
+    }
+
+
+
+.button-06 {
+    position:relative;
+    display:inline-grid; 
+    place-items:center; /* 2ラベルを重ねる */
+    height: 50px; width: 100px;
+    margin: 5px; padding: 0;
+    border:none; border-radius:5px 5px 20px 20px;
+    background:#5abae6; color:#fff;
+    font-size:15px; font-weight: 700;
+    line-height:2; letter-spacing:.01em; 
+    min-height:44px; min-inline-size:12ch;
+    cursor:pointer; overflow:hidden;
+    transition: background .3s ease, color .25s ease;
+    }
+
+.button-06 > span { grid-area:1/1; transition: transform .3s ease; }
+      
+.label-default { transform:translateY(0); }
+.label-hover { transform:translateY(-200%); color:#5abae6; }
+      
+.button-06:hover, .button-06:focus-visible {
+    background:#f8db55; color:#5abae6; outline:none;}
+.button-06:hover .label-default,
+.button-06:focus-visible .label-default { transform:translateY(200%); }
+      
+.button-06:hover .label-hover,
+.button-06:focus-visible .label-hover { transform:translateY(0); }
+
+
+
+.button-07 {
+    position: inline-block;
+    display: inline-block;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    }
+
+/* 内側の面をまとめる */
+.button-07 .flip {
+    display:inline-grid; 
+    place-items:center;
+    height: 50px; width: 100px;
+    margin: 5px; padding: 0;
+    min-height:44px; min-inline-size:12ch;
+    font-size:15px; font-weight: 700;
+    line-height:1; letter-spacing:.01em;
+    transform-style:preserve-3d;
+    transition: transform .45s ease;
+    }
+
+/* 表面・裏面 */
+.button-07 .front,
+.button-07 .back {
+    grid-area: 1/1;
+    display: grid; 
+    place-items: center;
+    width: 100%; height: 100%;
+    border-radius: 8px;
+    backface-visibility: hidden;
+    }
+
+.button-07 .front {
+    background:#5abae6; 
+    color:#fff;
+    transform: rotateY(0deg) 
+    }
+
+.button-07 .back {
+    background:#f8db55; 
+    color:#5abae6;
+    transform: rotateY(180deg);
+    }
+
+/* ホバーでくるっと回転（Y軸） */
+.button-07:hover .flip,
+.button-07:focus-visible .flip {
+    transform: rotateY(180deg);
+    }
+.button-07:focus-visible { outline:none; }
+
+
+
+.button-10{
+    position: relative;
+    display: inline-block;
+    height: 50px; width: 100px;
+    margin: 5px; padding: 0;
+    border: none; border-radius: 20px 5px;
+    overflow: hidden;                 
+    background: #f8db55; 
+    color: #5abae6;
+    font-size: 15px; font-weight: 700;
+    line-height: 1; letter-spacing: .01em;
+    min-height: 44px; min-inline-size: 12ch;
+    cursor: pointer;
+    transition: color .25s ease;
+    }
+
+.button-10 > span{ position: relative; z-index: 1; }
+  
+/* ダイヤ型 */
+.button-10::before{
+    content:"";
+    position:absolute; 
+    inset:0;
+    background: #5abae6;
+    /* 正真正銘のダイヤ形（♦）に切り抜く */
+    clip-path: polygon(50% 0%, 85% 50%, 50% 100%, 15% 50%);
+    transform-origin: center;
+    transform: scale(3.0);
+    transition: transform .85s ease;
+    pointer-events: none;
+    }
+  
+/* ホバーで菱形を中心へ“ズームイン” */
+.button-10:hover::before,
+.button-10:focus-visible::before{
+    transform: scale(0);
+    }
+.button-10:focus-visible{ outline: none; }
+
+
+
