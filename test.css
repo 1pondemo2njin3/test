@@ -1,0 +1,211 @@
+
+@charset "UTF-8";
+
+body {margin: 0;} /* 余白を無くす */
+
+img {
+    margin: 5px; /* 外枠 */ 
+    padding: 0px; /* 内枠 */ 
+    border-radius: 10px; /* 角の丸み*/
+}
+
+h2 {
+  color: #494541;
+  margin: 0px 5px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  }
+
+p { 
+  margin: 0px 5px; 
+  color: #3376D2;
+  font-size: 20px;
+  }
+
+.aka {color: #ea504a;}
+
+#container_index {
+  height: 400px; width: 400px;
+  margin: 50px auto; /* 中央表示 */
+  padding: 50px;
+  border-radius: 20px;
+  background-color: #5ABAE6;
+}
+
+#index_1 {
+  height: auto; width: auto;
+  margin: 0 auto; /* 中央表示 */
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #d5f7ff;}
+
+#index_2 {
+  height: auto; width: 110px;
+  margin: 100px auto; /* 中央表示 */
+  border-radius: 5px 30px 30px 5px;
+  background-color: #d5f7ff}
+
+#container {
+  width: 1200px;
+  margin: 0 auto; /* 中央表示 */
+  background-color: #ece7e7;
+}
+
+#header {
+  height: 60px; width: 1200px;
+  margin: 0 auto; /* 中央表示 */
+  display: flex; /* 横配列 */
+  justify-content: space-between; /* 要素間スペース 均等配置 両端 詰め */
+  border-radius: 0 0 10px 10px;
+  background-color: #5abae6;
+  
+}
+
+#header h1 {margin: 0;} /*余白を無くす*/
+
+.floating-banner h1 {margin: 0;} /*余白を無くす*/
+
+.floating-banner { 
+  position: fixed; /*画面上に固定*/
+  opacity: 0; /* 初期状態を非表示(透明度) */
+  pointer-events: none;
+  top: 0px;
+  height: 60px; width: 1200px;
+  display: flex; /* 横配列 */
+  justify-content: space-between;
+ 
+ transform: translateY(-100%);
+  transition: opacity 0.4s ease, transform 0.4s ease, bottom 0.3s ease;
+  z-index: 10;
+  
+  background: #5abae6;
+  color: #fff;
+  border-radius: 0 0 10px 10px;
+}
+
+.floating-banner.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/*閉じる表示*/
+.floating-banner__close {
+  height: 20px; width: auto;
+  padding: 5px; margin: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  opacity: 1;
+  border-radius: 5px;
+  background-color: #8fcae6;
+}
+
+.floating-banner__close:hover {opacity: 1;}
+
+.nav_f {display: flex;
+  margin: 0 5px;
+  align-items: flex-end;
+}
+
+.nav ul {
+  width: auto; margin: 16px 5px 0 0;
+  display: flex;
+  list-style-type: none;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #8fcae6;
+
+  }
+
+.nav li {
+  flex: 1; /* 各フレックスアイテムを等幅 */ 
+  padding: 5px; margin: 5px;
+  border-radius: 5px;
+  background-color: #5abae6;
+
+  }
+
+footer {
+  height: auto; width: auto;  
+  margin: 15px 0 0 0; padding: 0;
+  border-radius: 10px 10px 0 0;
+  justify-content: space-between;
+  text-align:center; color: #fff;
+  background-color: #5abae6;
+  }
+
+
+#top {
+  height: 200px; width: auto;
+  margin: 5px 0 0 0;
+  border-radius: 10px;
+  background-color: #d5f7ff;
+  }
+  
+
+#main {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#sub_menu {
+  width: 110px;
+  margin: 5px 0px; padding: 0;
+  border-radius: 0 10px 10px 0;
+  background-color: #d5f7ff;
+  order: 1;
+  }
+
+#content {
+  display: flex;
+  flex-wrap: wrap; /* 画面が狭い場合は折り返して表示 */
+  width: 855px; /* 基本は親要素の90%の幅 */
+  min-width: 425px; /* 最小値 */
+  padding: 5px;
+  gap: 5px; /* 間の幅 */
+  border-radius: 10px; /* 角丸 */
+  order: 2;
+  }
+
+.content_item_1 {
+  width: 210px;
+  margin: 0; padding: 0;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px #49454133; /* 影 */
+  background-color: #a8eed7;
+  }
+
+.content_item_2 {
+  width: 410px;
+  margin: 0; padding: 0px 7px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px #49454133; /* 影 */
+  background-color: #d2e9e1;
+  }
+
+.content_item_3 {
+  width: 610px;
+  margin: 0; padding: 0px 14px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px #49454133; /* 影 */
+  background-color: #8dd4bd;
+  }
+
+
+#topic {
+  width: 215px;
+  margin: 5px 0px;  padding: 5px;
+  border-radius: 10px 0 0 10px;
+  background-color: #d5f7ff;
+  order: 3;
+  }
+
+.topic_item {
+  height: auto; width: auto;
+  margin: 0; padding: 0;
+  border-radius: 10px;
+  }
+
