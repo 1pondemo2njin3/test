@@ -2,8 +2,7 @@
 @charset "UTF-8";
 
 /* 画面幅が ~px以下のとき 指定カラムを非表示 */
-@media (max-width: 1000px) {#topic {display: none;}}
-@media (max-width: 500px) {#header h1 {display: none;}}
+@media (max-width: 1240px) {#topic {display: none;}}
 
 body {
     max-width: 1200px;
@@ -18,19 +17,17 @@ h1 {margin: 0;} /*余白を無くす*/
 h2 { margin: 0px 5px;}
 
 a {text-decoration: none;} /* リンクの下線 */
-a:link    { color: ;}   /* 通常のリンク */
-a:visited { color: ;} /* 訪問済み */
+a:link    { color: #00B5BE;}   /* 通常のリンク */
+a:visited { color: #b03d81;} /* 訪問済み */
 a:hover   { color: #b03d81;}    /* マウスオーバー */
 a:active  { color: ;}  /* クリック中 */
 
-p { 
-  margin: 0px 5px; 
-  font-size: 20px; color: #384A86;}
+p {margin: 0px 5px; font-size: 20px; color: #384A86;}
 
 
 
 #container_index {
-  height: auto; width: 380px;
+  height: auto; width: 392px;
   margin: 0 auto; /* 中央表示 */
   padding: 50px;
   border-radius: 10px;
