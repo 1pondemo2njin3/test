@@ -30,7 +30,7 @@ p {margin: 0px 5px; font-size: 20px; color: #384A86;}
   height: auto; width: 392px;
   margin: 0 auto; /* 中央表示 */
   padding: 50px;
-  border-radius: 10px;
+  border-radius: 8px;
   background-color: #5ABAE6;
   }
 
@@ -38,7 +38,7 @@ p {margin: 0px 5px; font-size: 20px; color: #384A86;}
   height: auto; width: auto;
   margin: 0 auto; /* 中央表示 */
   padding: 10px;
-  border-radius: 8px;
+  border-radius: 10px;
   background-color: #d5f7ff;}
 
 #index_2 {
