@@ -1,0 +1,198 @@
+@charset "UTF-8";
+
+body {max-width: 1200px; margin: 0 auto; /* 余白を無くす */}
+
+img {margin: 5px; /* 外枠 */ padding: 0px; /* 内枠 */ 
+     border-radius: 10px; /* 角の丸み*/}
+
+h1 {margin: 0;} /*余白を無くす*/
+h2 { margin: 0px 5px;}
+
+p {margin: 5px; font-size: 20px; color: #494541;}
+
+
+
+#container {
+    width: auto;
+    margin: 0 auto; /* 中央表示 */
+    }
+
+
+#header {
+    display: flex; /* 横配列 */  
+    height: 60px; min-width: 755px; /* 最小値 */
+    margin: 0 auto; /* 中央表示 */
+    justify-content: space-between; /* 要素間スペース 均等配置 両端 詰め */
+    border-radius: 0 0 10px 10px;
+    background-color: #5abae6;
+    }
+  
+
+.floating-banner {
+    display: flex; /* 横配列 */
+    height: 60px; width: auto; min-width: 755px;
+    border-radius: 0 0 10px 10px;  
+    justify-content: space-between;
+    pointer-events: none;  
+    background: #5abae6;
+    color: #fff;
+    position: fixed; /*画面上に固定*/
+    top: 0px;  
+    opacity: 0; /* 初期状態を非表示(透明度) */
+    transform: translateY(-100%);
+    transition: opacity 0.4s ease, transform 0.4s ease, bottom 0.3s ease;
+    z-index: 10;
+    }
+  
+.floating-banner.is-visible {
+    pointer-events: auto;
+    opacity: 1;  
+    transform: translateY(0);
+    }
+  
+/*閉じる表示*/
+.floating-banner__close {
+    height: 20px; width: auto;
+    padding: 5px; margin: 25px 5px;
+    border-radius: 5px;
+    background-color: #8fcae6;
+    font-size: 12px;
+    cursor: pointer;
+    opacity: 1;
+    }
+  
+.floating-banner__close:hover {opacity: 1;}
+  
+.nav_f {display: flex;}
+  
+  
+.nav ul {
+    display: flex;
+    padding: 0;
+    border-radius: 10px;
+    background-color: #8fcae6;
+    list-style-type: none;
+    text-align: center;  
+    }
+  
+.nav li {
+    flex: 1; /* 各フレックスアイテムを等幅 */ 
+    width: 80px; height: auto; 
+    padding: 5px; margin: 5px;
+    border-radius: 5px;
+    background-color: #5abae6;
+    }
+  
+.nav a{color: #fff;}
+  
+  
+footer {
+    height: auto; min-width: 755px; /* 最小値 */
+    margin: 15px 0 0 0; padding: 0;
+    border-radius: 10px 10px 0 0;
+    justify-content: space-between;
+    text-align:center; color: #fff;
+    background-color: #5abae6;
+    }
+  
+#main {
+    width: auto; height: auto;
+    margin: 0px; padding: 0px;
+    border-radius: 5px;
+    background-color: #d5f7ff;    
+    }
+
+#topic {
+    width: auto;
+    margin: 0px; padding: 10px;
+    }
+
+/* ボタンの基本デザイン */
+.color-btn {
+    width: 100px; height: 100px;
+    margin: 2px; padding: 0px;
+    border: none; border-radius: 10px;
+    font-size: 20px; font-weight: 700; color: #fff;
+    line-height: 0; letter-spacing: .01em;
+    cursor: pointer;
+    }
+
+/* サンプル用の色 */
+.color_F8DB55 {background-color: #F8DB55}
+.color_F57D38 {background-color: #F57D38}
+.color_EA504A {background-color: #EA504A}
+.color_FA7395 {background-color: #FA7395}
+.color_EE6DCB {background-color: #EE6DCB}
+.color_B03D81 {background-color: #B03D81}
+.color_75358C {background-color: #75358C}
+
+.color_384A86 {background-color: #384A86}
+.color_3376D2 {background-color: #3376D2}
+.color_69A9E9 {background-color: #69A9E9}
+.color_5ABAE6 {background-color: #5ABAE6}
+.color_00B5BE {background-color: #00B5BE}
+.color_64C3C1 {background-color: #64C3C1}
+.color_4BD18C {background-color: #4BD18C}
+.color_1C7763 {background-color: #1C7763}
+
+.color_ECE7E7 {background-color: #ECE7E7}
+.color_494541 {background-color: #494541}
+.color_AF7E51 {background-color: #AF7E51}
+
+
+
+.palette {
+    margin: 0px; padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 7px;
+    }
+
+.color-box {
+    position: relative;
+    height: 80px;
+    border-radius: 10px;
+    transition: transform 0.1s;
+    overflow: hidden;   
+    cursor: pointer;    
+    }
+
+.color-box:hover {transform: scale(1.1);}
+
+.color-label {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0px;
+    font-size: 15px; font-weight: 700; color: #494541;
+    text-align: center;
+    background: #ffffff80;   
+    }
+
+
+
+#cp_container {
+    width: 135px; height: auto;
+    margin: 0px 10px; padding: 10px;    
+    font-weight: 700;
+    border-radius: 10px;
+    background: #5ABAE6;   
+    }
+
+.color-box_P {
+    width: 135px; height: 50px;
+    border-radius: 5px;
+    background: #ffffff; 
+    }
+
+
+
+button {
+    width: auto; height: auto;
+    margin-left: 35px; padding: 0px;
+    cursor: pointer;
+    }
+
+
+
+

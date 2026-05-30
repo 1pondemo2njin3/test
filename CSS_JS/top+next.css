@@ -1,0 +1,207 @@
+
+@charset "UTF-8";
+
+/* 画面幅が ~px以下のとき 指定カラムを非表示 */
+@media (max-width: 1240px) {#topic {display: none;}}
+
+body {
+    max-width: 1200px;
+    margin: 0 auto; /* 余白を無くす */
+    color: #494541;}
+
+img {
+    margin: 5px; /* 外枠 */ padding: 0px; /* 内枠 */ 
+    border-radius: 10px; /* 角の丸み*/}
+
+h1 {margin: 0;} /*余白を無くす*/
+h2 { margin: 0px 5px; color: #1C7763;}
+
+a {text-decoration: none;} /* リンクの下線 */
+a:link    { color: ;}   /* 通常のリンク */
+a:visited { color: ;} /* 訪問済み */
+a:hover   { color: #b03d81;}    /* マウスオーバー */
+a:active  { color: ;}  /* クリック中 */
+
+p {margin: 0px 5px; font-size: 20px; color: #384A86;}
+
+
+#container_top {
+  width: auto; min-width: 940px; /* 最小値 */
+  margin: 0 auto; /* 中央表示 */
+  }
+
+#container_next {
+  width: auto; min-width: 755px; /* 最小値 */
+  margin: 0 auto; /* 中央表示 */
+  }
+
+
+
+#header {
+  display: flex; /* 横配列 */  
+  height: 60px;
+  margin: 0 auto; /* 中央表示 */
+  justify-content: space-between; /* 要素間スペース 均等配置 両端 詰め */
+  border-radius: 0 0 10px 10px;
+  background-color: #64C3C1;
+  }
+
+
+.floating-banner {
+  display: flex; /* 横配列 */
+  height: 60px; width: auto; min-width: 755px;
+  border-radius: 0 0 10px 10px;  
+  justify-content: space-between;
+  pointer-events: none;  
+  background: #64C3C1;
+  color: #fff;
+  position: fixed; /*画面上に固定*/
+  top: 0px;  
+  opacity: 0; /* 初期状態を非表示(透明度) */
+  transform: translateY(-100%);
+  transition: opacity 0.4s ease, transform 0.4s ease, bottom 0.3s ease;
+  z-index: 10;
+  }
+
+.floating-banner.is-visible {
+  pointer-events: auto;
+  opacity: 1;  
+  transform: translateY(0);
+  }
+
+/*閉じる表示*/
+.floating-banner__close {
+  height: 20px; width: auto;
+  padding: 5px; margin: 25px 5px;
+  border-radius: 5px;
+  background-color: #00B5BE;
+  font-size: 12px;
+  cursor: pointer;
+  opacity: 1;
+  }
+
+.floating-banner__close:hover {opacity: 1;}
+
+.nav_f {display: flex;}
+
+
+.nav ul {
+  display: flex;
+  padding: 0;
+  border-radius: 10px 10px 0px 0px;
+  background-color: #ffffff;
+  list-style-type: none;
+  text-align: center;  
+  }
+
+.nav li {
+  flex: 1; /* 各フレックスアイテムを等幅 */ 
+  width: 80px; height: auto; 
+  padding: 5px; margin: 5px;
+  border-radius: 5px;
+  background-color: #00B5BE;
+  }
+
+.nav a{color: #fff;}
+
+
+footer {
+  height: auto;
+  margin: 15px 0 0 0; padding: 0;
+  border-radius: 10px 10px 0 0;
+  justify-content: space-between;
+  text-align:center; color: #fff;
+  background-color: #64C3C1;
+  }
+
+
+#top {
+  height: 200px;
+  margin: 5px 0 0 0;
+  border-radius: 10px;
+  background-color: #d5f7ff;
+  }
+  
+
+#main {
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+#sub_menu {
+  width: 110px;
+  margin: 5px 0px; padding: 0;
+  border-radius: 0 10px 10px 0;
+  background-color: #d5f7ff;
+  order: 1; /* 表示順番 */
+  }
+
+
+.content_article {
+  display: flex;
+  flex-wrap: wrap; /* 画面が狭い場合は折り返して表示 */
+  width: 855px; /* 基本は親要素の90%の幅 */
+  min-width: 825px; /* 最小値 */
+  padding: 5px;
+  gap: 5px; /* 間の幅 */
+  border-radius: 10px; /* 角丸 */
+  order: 2;
+  }
+
+/* 仕切り用*/
+.content_item_sub {
+  width: 855px; height: 0px;
+  margin: 0; padding: 0;
+  border-radius: 10px;
+  background-color: ;
+  }
+
+.content_item_0 {
+    width: 410px;
+    margin: 0; padding: 0;
+    border-radius: 10px;    
+    background-color: #a8eed7;
+    font-size: 15px;
+    }
+.content_item_0:hover {opacity: 0.7;}
+
+.content_item_1 {
+  width: 210px;
+  margin: 0; padding: 0;
+  border-radius: 10px 10px 30px 10px;
+  background-color: #a8eed7;
+  font-size: 15px;
+  }
+.content_item_1:hover {transform: translateY(-4px);}
+
+.content_item_2 {
+  width: 410px;
+  margin: 0; padding: 0px 7px;
+  border-radius: 10px 10px 30px 10px;
+  background-color: #d2e9e1;
+  }
+
+.content_item_3 {
+  width: 610px;
+  margin: 0; padding: 0px 14px;
+  border-radius: 10px 10px 30px 10px;
+  background-color: #8dd4bd;
+  }
+
+
+#topic {
+  width: 215px; min-width: 215px; /* 最小値 */
+  margin: 5px 0px;  padding: 5px;
+  border-radius: 10px 0 0 10px;
+  background-color: #d5f7ff;
+  order: 3;
+  }
+
+.topic_item {
+  width: auto; height: auto;
+  margin: 0; padding: 0;
+  border-radius: 10px;
+  }
+
+
