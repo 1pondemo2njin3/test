@@ -18,7 +18,7 @@ h2 { margin: 0px 5px;}
 
 a {text-decoration: none;} /* リンクの下線 */
 a:link    { color: #00B5BE;}   /* 通常のリンク */
-a:visited { color: #b03d81;} /* 訪問済み */
+a:visited { color: #75358C;} /* 訪問済み */
 a:hover   { color: #b03d81;}    /* マウスオーバー */
 a:active  { color: ;}  /* クリック中 */
 
