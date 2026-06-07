@@ -24,11 +24,19 @@
     <!-- 画像1200×630px 中心(重要)部分が長方形630x630Px -->
     <meta property="og:image" content="URL">
     <meta property="og:locale" content="ja_JP">
-      
+
     <link rel="stylesheet" href="CSS_JS/top+next.css">
     <link rel="stylesheet" href="CSS_JS/button.css">
+    <link rel="stylesheet" href="CSS_JS/slider.css">
     <script src="CSS_JS/color.js" defer></script>
     <script src="CSS_JS/floatingBanner.js" defer></script>
+    <script src="CSS_JS/slider.js" defer></script>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- Swiper JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 
     <!-- 検索結果に表示させたくないページの指定
     <meta name="robots" content="noindex,nofollow"> -->
@@ -37,7 +45,7 @@
 
 <body>
 
-<div id="container_top">
+<div id="container_all">
 
     <header id="header">
         <h1>
@@ -54,33 +62,54 @@
             <li><a href="https://1pondemo2njin3.github.io/test/color.html">パレット</a></li>
             </ul>
         </nav> 
-
-        <div class="floating-banner" id="floatingBanner">
-            <h1>
-                <a href="https://1pondemo2njin3.github.io/test/test.html">
-                <img src="Images/00.jpg" alt="ロゴマーク"></a>
-            </h1>
-
-            <div class="nav_f">
-            <nav class="nav">
-                <ul>
-                <li><a href="">カテゴリ1</a></li>
-                <li><a href="https://1pondemo2njin3.github.io/test/next_01.html">メニュー</a></li>
-                <li><a href="">カテゴリ3</a></li>
-                <li><a href="">カテゴリ4</a></li>
-                <li><a href="https://1pondemo2njin3.github.io/test/color.html">パレット</a></li>
-                </ul>
-            </nav>
-            <span class="floating-banner__close" id="bannerClose">閉</span>
-            </div>
-
-        </div>
     </header>
 
-    <div id="top">
+    <div class="floating-banner" id="floatingBanner">
+        <h1>
+            <a href="https://1pondemo2njin3.github.io/test/test.html">
+            <img src="Images/00.jpg" alt="ロゴマーク"></a>
+        </h1>
+
+        <div class="floating-banner_nav">
+        <nav class="nav">
+            <ul>
+            <li><a href="">カテゴリ1</a></li>
+            <li><a href="https://1pondemo2njin3.github.io/test/next_01.html">メニュー</a></li>
+            <li><a href="">カテゴリ3</a></li>
+            <li><a href="">カテゴリ4</a></li>
+            <li><a href="https://1pondemo2njin3.github.io/test/color.html">パレット</a></li>
+            </ul>
+            </nav>
+            <span class="floating-banner__close" id="bannerClose">閉</span>
+        </div>
+
     </div>
 
-    <main role="main" id="main">
+
+    <section id="top">
+        <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="Images/AI_m/01_00_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/01_03_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/01_05_m.jpg" alt=""></div>            
+            <div class="swiper-slide"><img src="Images/AI_m/02_00_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/02_05_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/02_06_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/03_00_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/03_01_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/03_02_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/04_00_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/05_00_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/05_01_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/05_02_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/06_00_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/06_01s_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/06_03_m.jpg" alt=""></div>
+        </div>
+        </div>
+    </section>
+
+    <div id="container_main">
         <aside id="sub_menu">
             <button class="button-01" onclick="location.href='https://1pondemo2njin3.github.io/test/next_01.html';">
             <span>詳しく見る</span></button>
@@ -100,42 +129,40 @@
             <button class="button-10" disabled><span>発見！</span></button>
         </aside>
 
-        <article class="content_article"> 
-            <div class="content_item_0">
+        <main>
+            <article class="content_item_0">
                 <a href="https://1pondemo2njin3.github.io/test/next_01.html">
                 <img src="Images/AI_m/01_00_l.jpg" alt=""/></a>        
-            </div>
+            </article>
   
-            <div class="content_item_0">
-            <a href="https://1pondemo2njin3.github.io/test/next_01.html">
+            <article class="content_item_0">
+                <a href="https://1pondemo2njin3.github.io/test/next_01.html">
                 <img src="Images/AI_m/02_00_l.jpg" alt=""/></a>
-            </div>
+            </article>
 
-            <div class="content_item_0">
+            <article class="content_item_0">
                 <a href="https://1pondemo2njin3.github.io/test/next_01.html">
                 <img src="Images/AI_m/03_00_l.jpg" alt=""/></a>
-            </div>
+            </article>
 
-            <div class="content_item_0">
+            <article class="content_item_0">
                 <a href="https://1pondemo2njin3.github.io/test/next_01.html">
                 <img src="Images/AI_m/04_00_l.jpg" alt=""/></a>
-            </div>
+            </article>
 
-            <div class="content_item_0">
+            <article class="content_item_0">
                 <!-- <a href=""> -->
                 <img src="Images/AI_m/05_00_l.jpg" alt=""/></a>
-            </div>
+            </article>
 
-            <div class="content_item_0">
+            <article class="content_item_0">
                 <!-- <a href=""> -->
                 <img src="Images/AI_m/06_00_l.jpg" alt=""/></a>
-            </div>
-
-        </article>
-
+            </article>
+        </main>
 
 
-        <div id="topic">
+        <aside id="topic">
             <div class="topic_item">
             <p style="text-align:center">予備スペース</p>
             <button class="color-btn color_F8DB55"
@@ -162,16 +189,16 @@
             <button class="color-btn color_494541" disabled>494541</button>
             <button class="color-btn color_AF7E51" disabled>AF7E51</button>
             </div>
-        </div>
+        </aside>
+    </div>
 
-    </main>
 
-    <footer>フッタースペース
+    <footer>
         <p>このページはテストページであり <br>情報は提供していません<br>
            This page is a test page <br>and does not provide any information.</p>
     </footer>
 
-</div>
+
 
 </body>
 </html>
