@@ -1,36 +1,46 @@
+
 @charset "UTF-8";
 
-body {max-width: 1200px; margin: 0 auto; /* 余白を無くす */}
+/* 画面幅に応じての設定*/
+@media screen and (max-width: 975px) {
+  body{width: 760px;} #floatingBanner{width: 760px;}}
+
+@media screen and (min-width: 975px) {
+  body{width: 975px;} #floatingBanner{width: 975px;}}
+
+@media screen and (min-width: 1150px) {
+  body{width: 1200px;} #floatingBanner{width: 1200px;}}
+
+
+
+body {margin: 0 auto;} /* 余白を無くす */
 
 img {margin: 5px; /* 外枠 */ padding: 0px; /* 内枠 */ 
      border-radius: 10px; /* 角の丸み*/}
 
 h1 {margin: 0;} /*余白を無くす*/
-h2 { margin: 0px 5px;}
+h2 {margin: 0px 5px;}
 
-p {margin: 5px; font-size: 20px; color: #494541;}
+p {margin: 5px; font-size: 20px; color: #583D3E;}
 
-
-
-#container {
-    width: auto;
-    margin: 0 auto; /* 中央表示 */
-    }
+a {text-decoration: none;} /* リンクの下線 */
 
 
 #header {
     display: flex; /* 横配列 */  
-    height: 60px; min-width: 755px; /* 最小値 */
+    width: auto; height: 60px;
     margin: 0 auto; /* 中央表示 */
-    justify-content: space-between; /* 要素間スペース 均等配置 両端 詰め */
     border-radius: 0 0 10px 10px;
+    justify-content: ; /* 要素間スペース 均等配置 両端 詰め */
     background-color: #5abae6;
     }
   
 
 .floating-banner {
     display: flex; /* 横配列 */
-    height: 60px; width: auto; min-width: 755px;
+    width: auto; height: 60px;
+    min-width: 760px; /* main+navの最小幅 */
+    max-width: 1200px;
     border-radius: 0 0 10px 10px;  
     justify-content: space-between;
     pointer-events: none;  
@@ -52,8 +62,8 @@ p {margin: 5px; font-size: 20px; color: #494541;}
   
 /*閉じる表示*/
 .floating-banner__close {
-    height: 20px; width: auto;
-    padding: 5px; margin: 25px 5px;
+    width: auto; height: 20px;
+    margin: 25px 5px; padding: 5px;
     border-radius: 5px;
     background-color: #8fcae6;
     font-size: 12px;
@@ -61,11 +71,11 @@ p {margin: 5px; font-size: 20px; color: #494541;}
     opacity: 1;
     }
   
-.floating-banner__close:hover {opacity: 1;}
-  
-.nav_f {display: flex;}
-  
-  
+.floating-banner__close:hover {opacity: 1;}  
+.floating-banner_nav {display: flex;}
+
+.nav{margin-left: auto;}
+.nav a{color: #fff;}   
 .nav ul {
     display: flex;
     padding: 0;
@@ -83,9 +93,8 @@ p {margin: 5px; font-size: 20px; color: #494541;}
     background-color: #5abae6;
     }
   
-.nav a{color: #fff;}
-  
-  
+
+
 footer {
     height: auto; min-width: 755px; /* 最小値 */
     margin: 15px 0 0 0; padding: 0;
@@ -94,15 +103,27 @@ footer {
     text-align:center; color: #fff;
     background-color: #5abae6;
     }
-  
-#main {
+
+
+
+#container_all {
+    width: auto;
+    min-width: 760px;  /* 最小値 */
+    max-width: 1200px;
+    margin: 0 auto; /* 中央表示 */
+    /* background-color: #ece7e7; */
+    color: #494541;
+    }
+
+main {
     width: auto; height: auto;
     margin: 0px; padding: 0px;
     border-radius: 5px;
     background-color: #d5f7ff;    
     }
 
-#topic {
+
+#color_palette {
     width: auto;
     margin: 0px; padding: 10px;
     }
@@ -141,6 +162,7 @@ footer {
 
 
 
+/* color.js */
 .palette {
     margin: 0px; padding: 10px;
     display: grid;
@@ -148,9 +170,11 @@ footer {
     gap: 7px;
     }
 
+
+
 .color-box {
     position: relative;
-    height: 80px;
+    width: auto; height: 80px;
     border-radius: 10px;
     transition: transform 0.1s;
     overflow: hidden;   
@@ -164,14 +188,14 @@ footer {
     bottom: 0;
     width: 100%;
     padding: 0px;
-    font-size: 15px; font-weight: 700; color: #494541;
+    font-size: 15px; font-weight: 700; color: #583D3E;
     text-align: center;
     background: #ffffff80;   
     }
 
 
 
-#cp_container {
+#container_colorPicker {
     width: 135px; height: auto;
     margin: 0px 10px; padding: 10px;    
     font-weight: 700;

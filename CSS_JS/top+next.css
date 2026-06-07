@@ -2,65 +2,66 @@
 @charset "UTF-8";
 
 /* 画面幅が ~px以下のとき 指定カラムを非表示 */
-@media (max-width: 1240px) {#topic {display: none;}}
+@media screen and (max-width: 1150px) {#topic {display: none;}}
 
-body {
-    max-width: 1200px;
-    margin: 0 auto; /* 余白を無くす */
-    color: #494541;}
+/* 画面幅に応じての設定*/
+@media screen and (max-width: 975px) {
+  body{width: 760px;} #floatingBanner{width: 760px;}
+  .content_item_0 img {width: 300px;}}
+
+@media screen and (min-width: 975px) {
+  body{width: 975px;} #floatingBanner{width: 975px;}}
+
+@media screen and (min-width: 1150px) {
+  body{width: 1200px;} #floatingBanner{width: 1200px;}}
+
+
+
+body {margin: 0 auto;} /* 余白を無くす */
 
 img {
     margin: 5px; /* 外枠 */ padding: 0px; /* 内枠 */ 
     border-radius: 10px; /* 角の丸み*/}
 
 h1 {margin: 0;} /*余白を無くす*/
-h2 { margin: 0px 5px; color: #1C7763;}
+h2 {margin: 0px 5px; color: #1C7763;}
 
 a {text-decoration: none;} /* リンクの下線 */
 a:link    { color: #00B5BE;}   /* 通常のリンク */
 a:visited { color: #75358C;} /* 訪問済み */
 a:hover   { color: #b03d81;}    /* マウスオーバー */
-a:active  { color: ;}  /* クリック中 */
+/* a:active  { color: ;} クリック中 */
 
 p {margin: 0px 5px; font-size: 20px; color: #384A86;}
-
-
-#container_top {
-  width: auto; min-width: 940px; /* 最小値 */
-  margin: 0 auto; /* 中央表示 */
-  }
-
-#container_next {
-  width: auto; min-width: 755px; /* 最小値 */
-  margin: 0 auto; /* 中央表示 */
-  }
 
 
 
 #header {
   display: flex; /* 横配列 */  
-  height: 60px;
+  width: auto; height: 60px;
   margin: 0 auto; /* 中央表示 */
-  justify-content: space-between; /* 要素間スペース 均等配置 両端 詰め */
   border-radius: 0 0 10px 10px;
+  justify-content: ; /* 要素間スペース 均等配置 両端 詰め */
   background-color: #64C3C1;
   }
 
 
 .floating-banner {
   display: flex; /* 横配列 */
-  height: 60px; width: auto; min-width: 755px;
+  width: auto; height: 60px; /* ここの widthは %で指定*/
+  min-width: 760px; /* main+navの最小幅 */
+  max-width: 1200px;
   border-radius: 0 0 10px 10px;  
   justify-content: space-between;
   pointer-events: none;  
   background: #64C3C1;
   color: #fff;
   position: fixed; /*画面上に固定*/
-  top: 0px;  
+  top: 0px;
   opacity: 0; /* 初期状態を非表示(透明度) */
   transform: translateY(-100%);
   transition: opacity 0.4s ease, transform 0.4s ease, bottom 0.3s ease;
-  z-index: 10;
+  z-index: 10; /* 表示の奥行*/
   }
 
 .floating-banner.is-visible {
@@ -71,8 +72,8 @@ p {margin: 0px 5px; font-size: 20px; color: #384A86;}
 
 /*閉じる表示*/
 .floating-banner__close {
-  height: 20px; width: auto;
-  padding: 5px; margin: 25px 5px;
+  width: auto; height: 20px;
+  margin: 25px 5px; padding: 5px;
   border-radius: 5px;
   background-color: #00B5BE;
   font-size: 12px;
@@ -81,10 +82,11 @@ p {margin: 0px 5px; font-size: 20px; color: #384A86;}
   }
 
 .floating-banner__close:hover {opacity: 1;}
+.floating-banner_nav {display: flex;}
 
-.nav_f {display: flex;}
 
-
+.nav{margin-left: auto;}
+.nav a{color: #fff;}
 .nav ul {
   display: flex;
   padding: 0;
@@ -97,12 +99,11 @@ p {margin: 0px 5px; font-size: 20px; color: #384A86;}
 .nav li {
   flex: 1; /* 各フレックスアイテムを等幅 */ 
   width: 80px; height: auto; 
-  padding: 5px; margin: 5px;
+  margin: 5px; padding: 5px;
   border-radius: 5px;
   background-color: #00B5BE;
   }
 
-.nav a{color: #fff;}
 
 
 footer {
@@ -115,51 +116,61 @@ footer {
   }
 
 
+
 #top {
-  height: 200px;
-  margin: 5px 0 0 0;
+  width: auto; height: 210px;
+  margin: 5px auto; padding: 5px;
   border-radius: 10px;
-  background-color: #d5f7ff;
+  background-color: #a8eed7;
+  overflow: hidden;
+  }
+
+
+
+#container_all {
+  width: auto;
+  min-width: 760px;  /* 最小値 */
+  max-width: 1200px;
+  margin: 0 auto; /* 中央表示 */
+  /* background-color: #ece7e7; */
+  color: #494541;
+  }
+
+#container_main {
+  display: flex;
+  width: auto;
+  min-width: ; /* main+navの最小幅 */
+  max-width: ;
+  margin: 0 auto; 
+  justify-content: flex-start;
   }
   
 
-#main {
-  display: flex;
-  justify-content: flex-start;
-}
 
-
-#sub_menu {
-  width: 110px;
-  margin: 5px 0px; padding: 0;
-  border-radius: 0 10px 10px 0;
-  background-color: #d5f7ff;
-  order: 1; /* 表示順番 */
-  }
-
-
-.content_article {
+main {
   display: flex;
   flex-wrap: wrap; /* 画面が狭い場合は折り返して表示 */
-  width: 855px; /* 基本は親要素の90%の幅 */
-  min-width: 825px; /* 最小値 */
+  width: auto;
+  min-width: 640px;
+  max-width: 860px;
   padding: 5px;
   gap: 5px; /* 間の幅 */
   border-radius: 10px; /* 角丸 */
   order: 2;
   }
 
+
 /* 仕切り用*/
 .content_item_sub {
-  width: 855px; height: 0px;
+  width: 860px; height: 0px;
   margin: 0; padding: 0;
   border-radius: 10px;
-  background-color: ;
+  /* background-color: ; */
   }
 
 .content_item_0 {
-    width: 410px;
-    margin: 0; padding: 0;
+    width: auto; height: auto;
+    margin: 0 auto; padding: 0;
     border-radius: 10px;    
     background-color: #a8eed7;
     font-size: 15px;
@@ -173,7 +184,7 @@ footer {
   background-color: #a8eed7;
   font-size: 15px;
   }
-.content_item_1:hover {transform: translateY(-4px);}
+.content_item_1:hover {transform: translateY(-4px); opacity: 0.7;}
 
 .content_item_2 {
   width: 410px;
@@ -190,9 +201,20 @@ footer {
   }
 
 
+
+#sub_menu {
+  width: 110px;
+  margin: 5px 0px; padding: 0;
+  border-radius: 0 10px 10px 0;
+  background-color: #d5f7ff;
+  order: 1; /* 表示順番 */
+  }
+
+
+
 #topic {
   width: 215px; min-width: 215px; /* 最小値 */
-  margin: 5px 0px;  padding: 5px;
+  margin: 5px 0;  padding: 5px;
   border-radius: 10px 0 0 10px;
   background-color: #d5f7ff;
   order: 3;
@@ -202,6 +224,7 @@ footer {
   width: auto; height: auto;
   margin: 0; padding: 0;
   border-radius: 10px;
+  justify-content: space-between;
   }
 
 

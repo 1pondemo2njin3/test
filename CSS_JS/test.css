@@ -2,19 +2,30 @@
 @charset "UTF-8";
 
 /* 画面幅が ~px以下のとき 指定カラムを非表示 */
-@media (max-width: 1240px) {#topic {display: none;}}
+@media (max-width: 1150px) {#topic {display: none;}}
 
-body {
-    max-width: 1200px;
-    margin: 0 auto; /* 余白を無くす */
-    color: #494541;}
+/* 画面幅に応じての設定*/
+@media screen and (max-width: 975px) {
+  body{width: 760px;} #floatingBanner{width: 760px;}
+  .content_item_0 img {width: 300px;}}
+
+@media screen and (min-width: 975px) {
+  body{width: 975px;} #floatingBanner{width: 975px;}}
+
+@media screen and (min-width: 1150px) {
+  body{width: 1200px;} #floatingBanner{width: 1200px;}}
+
+
+
+html {height:100%;}
+body {margin: 0 auto; height:100%;} /* 余白を無くす */
 
 img {
     margin: 5px; /* 外枠 */ padding: 0px; /* 内枠 */ 
     border-radius: 10px; /* 角の丸み*/}
 
 h1 {margin: 0;} /*余白を無くす*/
-h2 { margin: 0px 5px;}
+h2 {margin: 0px 5px;}
 
 a {text-decoration: none;} /* リンクの下線 */
 a:link    { color: #00B5BE;}   /* 通常のリンク */
@@ -26,55 +37,28 @@ p {margin: 0px 5px; font-size: 20px; color: #384A86;}
 
 
 
-#container_index {
-  height: auto; width: 392px;
-  margin: 0 auto; /* 中央表示 */
-  padding: 50px;
-  border-radius: 8px;
-  background-color: #5ABAE6;
-  }
-
-#index_1 {
-  height: auto; width: auto;
-  margin: 0 auto; /* 中央表示 */
-  padding: 10px;
-  border-radius: 10px;
-  background-color: #d5f7ff;}
-
-#index_2 {
-  height: auto; width: 110px;
-  margin: 100px auto; /* 中央表示 */
-  border-radius: 5px 30px 30px 5px;
-  background-color: #d5f7ff}
-
-
-#container {
-  width: auto; min-width: 755px; /* 最小値 */
-  margin: 0 auto; /* 中央表示 */
-  background-color: #ece7e7;
-  }
-
-
 #header {
   display: flex; /* 横配列 */  
-  height: 60px; min-width: 755px; /* 最小値 */
+  width: auto; height: 60px;
   margin: 0 auto; /* 中央表示 */
-  justify-content: space-between; /* 要素間スペース 均等配置 両端 詰め */
   border-radius: 0 0 10px 10px;
+  justify-content: ; /* 要素間スペース 均等配置 両端 詰め */
+
   background-color: #5abae6;
   }
 
-
 .floating-banner {
   display: flex; /* 横配列 */
-  height: 60px; width: auto; min-width: 755px;
+  width: auto; height: 60px; /* ここの widthは %で指定*/
+  min-width: 760px; /* main+navの最小幅 */
+  max-width: 1200px;
   border-radius: 0 0 10px 10px;  
   justify-content: space-between;
   pointer-events: none;  
   background: #5abae6;
   color: #fff;
   position: fixed; /*画面上に固定*/
-  top: 0px;  
+  top: 0px;
   opacity: 0; /* 初期状態を非表示(透明度) */
   transform: translateY(-100%);
   transition: opacity 0.4s ease, transform 0.4s ease, bottom 0.3s ease;
@@ -99,10 +83,11 @@ p {margin: 0px 5px; font-size: 20px; color: #384A86;}
   }
 
 .floating-banner__close:hover {opacity: 1;}
+.floating-banner_nav {display: flex;}
 
-.nav_f {display: flex;}
 
-
+.nav{margin-left: auto;}
+.nav a{color: #fff;}
 .nav ul {
   display: flex;
   padding: 0;
@@ -120,11 +105,11 @@ p {margin: 0px 5px; font-size: 20px; color: #384A86;}
   background-color: #5abae6;
   }
 
-.nav a{color: #fff;}
+
 
 
 footer {
-  height: auto; min-width: 755px; /* 最小値 */
+  height: auto;
   margin: 15px 0 0 0; padding: 0;
   border-radius: 10px 10px 0 0;
   justify-content: space-between;
@@ -133,18 +118,56 @@ footer {
   }
 
 
+
+#container_index {
+  width: auto; height:100%;
+  margin: 0 auto; /* 中央表示 */
+  padding: 50px;
+  border-radius: 8px;
+  background-color: #5ABAE6;
+  }
+
+#index_1 {
+  width: 500px;
+  margin: 0 auto; /* 中央表示 */
+  padding: 50px;
+  border-radius: 10px;
+  background-color: #d5f7ff;}
+
+#index_2 {
+  width: 110px;
+  margin: 200px auto; /* 中央表示 */
+  border-radius: 5px 30px 30px 5px;
+  background-color: #d5f7ff}
+
+#container_all {
+  width: auto;
+  min-width: 760px; /* main+navの最小幅 */
+  max-width: 1200px;
+  margin: 0 auto; /* 中央表示 */
+  background-color: #ece7e7;
+  color: #494541;
+  }
+
+#container_main {
+  display: flex;
+  width: auto;
+  min-width: ; /* main+navの最小幅 */
+  max-width: ;
+  margin: 0 auto; 
+  justify-content: flex-start;
+  }
+
+#container_center {display: flex;}
+
 #top {
-  height: 200px; min-width: 755px; /* 最小値 */
-  margin: 5px 0 0 0;
+  width: 720px;
+  height: 200px;
+  margin: 5px auto;
   border-radius: 10px;
   background-color: #d5f7ff;
   }
   
-
-#main {
-  display: flex;
-  justify-content: flex-start;
-}
 
 
 #sub_menu {
@@ -156,11 +179,13 @@ footer {
   }
 
 
-.content_article {
+
+main {
   display: flex;
   flex-wrap: wrap; /* 画面が狭い場合は折り返して表示 */
-  width: 855px; /* 基本は親要素の90%の幅 */
-  min-width: 640px; /* 最小値 */
+  width: auto;
+  min-width: 640px;
+  max-width: 860px;
   padding: 5px;
   gap: 5px; /* 間の幅 */
   border-radius: 10px; /* 角丸 */
@@ -169,7 +194,7 @@ footer {
 
 /* 仕切り用*/
 .content_item_sub {
-  width: 945px; height: 0px;
+  width: 860px; height: 0px;
   margin: 0; padding: 0;
   border-radius: 10px;
   }
@@ -180,7 +205,7 @@ footer {
   border-radius: 10px 10px 30px 10px;
   box-shadow: 10px 10px 10px #49454133; /* 影 */
   background-color: #a8eed7;
-  font-size: 15px;
+  font-size: 15px; color: #00B5BE;
   }
 
 .content_item_2 {
@@ -202,7 +227,7 @@ footer {
 
 #topic {
   width: 215px; min-width: 215px; /* 最小値 */
-  margin: 5px 0px;  padding: 5px;
+  margin: 5px 0;  padding: 5px;
   border-radius: 10px 0 0 10px;
   background-color: #d5f7ff;
   order: 3;
