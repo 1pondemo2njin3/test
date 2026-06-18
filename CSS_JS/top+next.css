@@ -17,11 +17,11 @@
 
 
 
-body {margin: 0 auto;} /* 余白を無くす */
+body {height: 100%; margin: 0 auto;}
 
 img {
-    margin: 5px; /* 外枠 */ padding: 0px; /* 内枠 */ 
-    border-radius: 10px; /* 角の丸み*/}
+    margin: 5px; padding: 0px;
+    border-radius: 10px;}
 
 h1 {margin: 0;} /*余白を無くす*/
 h2 {margin: 0px 5px; color: #1C7763;}
@@ -36,16 +36,24 @@ p {margin: 0px 5px; font-size: 20px; color: #384A86;}
 
 
 
-#header {
+header {
   display: flex; /* 横配列 */  
   width: auto; height: 60px;
   margin: 0 auto; /* 中央表示 */
   border-radius: 0 0 10px 10px;
-  justify-content: ; /* 要素間スペース 均等配置 両端 詰め */
   background-color: #64C3C1;
   }
 
+footer {
+  height: auto;
+  margin: 15px 0 0 0; padding: 0;
+  border-radius: 10px 10px 0 0;
+  justify-content: space-between; /* 要素間スペース 均等配置 両端 詰め */
+  text-align:center; color: #fff;
+  background-color: #64C3C1;
+  }
 
+  
 .floating-banner {
   display: flex; /* 横配列 */
   width: auto; height: 60px; /* ここの widthは %で指定*/
@@ -106,14 +114,7 @@ p {margin: 0px 5px; font-size: 20px; color: #384A86;}
 
 
 
-footer {
-  height: auto;
-  margin: 15px 0 0 0; padding: 0;
-  border-radius: 10px 10px 0 0;
-  justify-content: space-between;
-  text-align:center; color: #fff;
-  background-color: #64C3C1;
-  }
+
 
 
 
@@ -128,9 +129,7 @@ footer {
 
 
 #container_all {
-  width: auto;
-  min-width: 760px;  /* 最小値 */
-  max-width: 1200px;
+  width: 100%; max-width: 1200px;
   margin: 0 auto; /* 中央表示 */
   /* background-color: #ece7e7; */
   color: #494541;

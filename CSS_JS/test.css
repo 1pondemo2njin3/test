@@ -2,6 +2,7 @@
 @charset "UTF-8";
 
 /* 画面幅が ~px以下のとき 指定カラムを非表示 */
+@media (max-width: 760px) {.floating-banner__close {display: none;}}
 @media (max-width: 1150px) {#topic {display: none;}}
 
 /* 画面幅に応じての設定*/
@@ -17,12 +18,9 @@
 
 
 
-html {height:100%;}
-body {margin: 0 auto; height:100%;} /* 余白を無くす */
-
 img {
-    margin: 5px; /* 外枠 */ padding: 0px; /* 内枠 */ 
-    border-radius: 10px; /* 角の丸み*/}
+    margin: 5px; padding: 0px;
+    border-radius: 10px;}
 
 h1 {margin: 0;} /*余白を無くす*/
 h2 {margin: 0px 5px;}
@@ -31,27 +29,36 @@ a {text-decoration: none;} /* リンクの下線 */
 a:link    { color: #00B5BE;}   /* 通常のリンク */
 a:visited { color: #75358C;} /* 訪問済み */
 a:hover   { color: #b03d81;}    /* マウスオーバー */
-a:active  { color: ;}  /* クリック中 */
+/* a:active  { color: ;} クリック中 */
 
 p {margin: 0px 5px; font-size: 20px; color: #384A86;}
 
 
 
-#header {
-  display: flex; /* 横配列 */  
-  width: auto; height: 60px;
-  margin: 0 auto; /* 中央表示 */
-  border-radius: 0 0 10px 10px;
-  justify-content: ; /* 要素間スペース 均等配置 両端 詰め */
+html body {height: 100%; margin: 0 auto;}
 
+header {
+  display: flex; /* 横配列 */
+  width: 100%; height: 60px;
+  margin: 0 auto; /* 中央表示 */
+  border-radius: 0 0 10px 10px; /* 角丸 */
   background-color: #5abae6;
   }
 
+footer {
+  width: 100%; height: auto;
+  margin: 15px 0 0 0;
+  border-radius: 10px 10px 0 0;
+  justify-content: space-between;
+  text-align:center; color: #fff;
+  background-color: #5abae6;
+  }
+
+
+/* フローティング バナー */
 .floating-banner {
   display: flex; /* 横配列 */
-  width: auto; height: 60px; /* ここの widthは %で指定*/
-  min-width: 760px; /* main+navの最小幅 */
-  max-width: 1200px;
+  width: 100%; height: 60px;
   border-radius: 0 0 10px 10px;  
   justify-content: space-between;
   pointer-events: none;  
@@ -73,7 +80,7 @@ p {margin: 0px 5px; font-size: 20px; color: #384A86;}
 
 /*閉じる表示*/
 .floating-banner__close {
-  height: 20px; width: auto;
+  width: auto; height: 20px;
   padding: 5px; margin: 25px 5px;
   border-radius: 5px;
   background-color: #8fcae6;
@@ -86,6 +93,7 @@ p {margin: 0px 5px; font-size: 20px; color: #384A86;}
 .floating-banner_nav {display: flex;}
 
 
+/* ナビゲーション */
 .nav{margin-left: auto;}
 .nav a{color: #fff;}
 .nav ul {
@@ -106,63 +114,50 @@ p {margin: 0px 5px; font-size: 20px; color: #384A86;}
   }
 
 
-
-
-footer {
-  height: auto;
-  margin: 15px 0 0 0; padding: 0;
-  border-radius: 10px 10px 0 0;
-  justify-content: space-between;
-  text-align:center; color: #fff;
-  background-color: #5abae6;
-  }
-
-
-
+/* 各 コンテナー */
 #container_index {
-  width: auto; height:100%;
+  display: inline-block; /* インライン要素<a><p><span>を ブロック */
+  width: 100%;
   margin: 0 auto; /* 中央表示 */
-  padding: 50px;
+  padding: 0px auto;
   border-radius: 8px;
-  background-color: #5ABAE6;
   }
 
-#index_1 {
-  width: 500px;
-  margin: 0 auto; /* 中央表示 */
-  padding: 50px;
+#index_p {
+  width: 100%; max-width: 320px;
+  margin: 100px auto;
+  padding: 30px;
   border-radius: 10px;
-  background-color: #d5f7ff;}
+  background-color: #d5f7ff;
+  text-align: center;
+}
 
-#index_2 {
+#index_button {
   width: 110px;
-  margin: 200px auto; /* 中央表示 */
+  margin: 0 auto; /* 中央表示 */
   border-radius: 5px 30px 30px 5px;
-  background-color: #d5f7ff}
+  background-color: #d5f7ff;
+  text-align: center; 
+}
 
 #container_all {
-  width: auto;
-  min-width: 760px; /* main+navの最小幅 */
-  max-width: 1200px;
+  width: 100%; max-width: 1200px;
   margin: 0 auto; /* 中央表示 */
   background-color: #ece7e7;
-  color: #494541;
+  color: #494541; /* 文字色 */
   }
 
 #container_main {
   display: flex;
-  width: auto;
-  min-width: ; /* main+navの最小幅 */
-  max-width: ;
-  margin: 0 auto; 
-  justify-content: flex-start;
+  width: 100%; max-width: ;
+  margin: 0 auto;
+  justify-content: flex-start; /* order 番号順に表示 */
   }
 
-#container_center {display: flex;}
+
 
 #top {
-  width: 720px;
-  height: 200px;
+  width: 100%; height: 200px;
   margin: 5px auto;
   border-radius: 10px;
   background-color: #d5f7ff;
@@ -171,7 +166,7 @@ footer {
 
 
 #sub_menu {
-  width: 110px;
+  width: 100%; max-width: 110px;
   margin: 5px 0px; padding: 0;
   border-radius: 0 10px 10px 0;
   background-color: #d5f7ff;
@@ -183,24 +178,23 @@ footer {
 main {
   display: flex;
   flex-wrap: wrap; /* 画面が狭い場合は折り返して表示 */
-  width: auto;
-  min-width: 640px;
-  max-width: 860px;
+  width: 100%; max-width: 860px;
   padding: 5px;
   gap: 5px; /* 間の幅 */
-  border-radius: 10px; /* 角丸 */
+  border-radius: 10px;
   order: 2;
   }
 
-/* 仕切り用*/
+/* 仕切り用 */
 .content_item_sub {
-  width: 860px; height: 0px;
+  width: 100%; max-width: 860px;
+  height: 0px;
   margin: 0; padding: 0;
   border-radius: 10px;
   }
 
 .content_item_1 {
-  width: 210px; height: auto;
+  width: 100%; max-width: 210px;
   margin: 0; padding: 0;
   border-radius: 10px 10px 30px 10px;
   box-shadow: 10px 10px 10px #49454133; /* 影 */
@@ -209,7 +203,7 @@ main {
   }
 
 .content_item_2 {
-  width: 410px;
+  width: 100%; max-width: 410px;
   margin: 0; padding: 0px 7px;
   border-radius: 10px 10px 30px 10px;
   box-shadow: 10px 10px 10px #49454133; /* 影 */
@@ -217,7 +211,7 @@ main {
   }
 
 .content_item_3 {
-  width: 610px;
+  width: 100%; max-width: 610px;
   margin: 0; padding: 0px 14px;
   border-radius: 10px 10px 30px 10px;
   box-shadow: 10px 10px 10px #49454133; /* 影 */
@@ -226,7 +220,7 @@ main {
 
 
 #topic {
-  width: 215px; min-width: 215px; /* 最小値 */
+  width: 100%; max-width: 215px;
   margin: 5px 0;  padding: 5px;
   border-radius: 10px 0 0 10px;
   background-color: #d5f7ff;
