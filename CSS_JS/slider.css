@@ -1,7 +1,7 @@
 
-@media screen and (max-width: 975px) {#top {width: 640px;}}
-@media screen and (min-width: 975px) {#top {width: 860px;}}
-@media screen and (min-width: 1150px) {#top {width: 1080px;}}
+@media screen and (max-width: 975px) {#top_space {width: 640px;}}
+@media screen and (min-width: 975px) {#top_space {width: 860px;}}
+@media screen and (min-width: 1150px) {#top_space {width: 1080px;}}
 
 /* スライダー全体 */
 .swiper {

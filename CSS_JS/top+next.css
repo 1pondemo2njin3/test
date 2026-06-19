@@ -2,22 +2,28 @@
 @charset "UTF-8";
 
 /* 画面幅が ~px以下のとき 指定カラムを非表示 */
-@media screen and (max-width: 1150px) {#topic {display: none;}}
+@media (max-width: 600px) {#floatingBanner h1 {display: none;}}
+@media (max-width: 760px) {#sub_menu {display: none;}}
+@media (max-width: 1150px) {#topic {display: none;}}
 
 /* 画面幅に応じての設定*/
-@media screen and (max-width: 975px) {
+@media screen and (max-width: 759px) {
+  body{width: 650px;} #floatingBanner{width: 650px;}
+    .content_item_0 img {width: 300px;}
+    h1 img {width: 100px; height: 50px;}}
+
+@media screen and (min-width: 760px) {
   body{width: 760px;} #floatingBanner{width: 760px;}
   .content_item_0 img {width: 300px;}}
 
 @media screen and (min-width: 975px) {
-  body{width: 975px;} #floatingBanner{width: 975px;}}
+  body{width: 975px;} #floatingBanner{width: 975px;}
+  .content_item_0 img {width: auto;}}
 
 @media screen and (min-width: 1150px) {
   body{width: 1200px;} #floatingBanner{width: 1200px;}}
 
 
-
-body {height: 100%; margin: 0 auto;}
 
 img {
     margin: 5px; padding: 0px;
@@ -36,6 +42,8 @@ p {margin: 0px 5px; font-size: 20px; color: #384A86;}
 
 
 
+html body {height: 100%; margin: 0 auto;}
+
 header {
   display: flex; /* 横配列 */  
   width: auto; height: 60px;
@@ -53,12 +61,11 @@ footer {
   background-color: #64C3C1;
   }
 
-  
+
+/* フローティング バナー */  
 .floating-banner {
   display: flex; /* 横配列 */
-  width: auto; height: 60px; /* ここの widthは %で指定*/
-  min-width: 760px; /* main+navの最小幅 */
-  max-width: 1200px;
+  width: auto; height: 60px;
   border-radius: 0 0 10px 10px;  
   justify-content: space-between;
   pointer-events: none;  
@@ -93,6 +100,7 @@ footer {
 .floating-banner_nav {display: flex;}
 
 
+/* ナビゲーション */
 .nav{margin-left: auto;}
 .nav a{color: #fff;}
 .nav ul {
@@ -114,11 +122,24 @@ footer {
 
 
 
+/* 各 コンテナー */
+#container_all {
+  width: 100%; max-width: 100%;
+  margin: 0 auto; /* 中央表示 */
+  /* background-color: #ece7e7; */
+  color: #494541;
+  }
+
+#container_main {
+  display: flex;
+  width: auto; max-width: 100%;
+  margin: 0 auto; 
+  justify-content: flex-start;
+  }
+ 
 
 
-
-
-#top {
+#top_space {
   width: auto; height: 210px;
   margin: 5px auto; padding: 5px;
   border-radius: 10px;
@@ -128,30 +149,20 @@ footer {
 
 
 
-#container_all {
-  width: 100%; max-width: 1200px;
-  margin: 0 auto; /* 中央表示 */
-  /* background-color: #ece7e7; */
-  color: #494541;
+#sub_menu {
+  width: auto; max-width: 110px;
+  margin: 5px 0px; padding: 0;
+  border-radius: 0 10px 10px 0;
+  background-color: #d5f7ff;
+  order: 1; /* 表示順番 */
   }
 
-#container_main {
-  display: flex;
-  width: auto;
-  min-width: ; /* main+navの最小幅 */
-  max-width: ;
-  margin: 0 auto; 
-  justify-content: flex-start;
-  }
-  
 
 
 main {
   display: flex;
   flex-wrap: wrap; /* 画面が狭い場合は折り返して表示 */
-  width: auto;
-  min-width: 640px;
-  max-width: 860px;
+  width: auto; max-width: 860px;
   padding: 5px;
   gap: 5px; /* 間の幅 */
   border-radius: 10px; /* 角丸 */
@@ -161,7 +172,7 @@ main {
 
 /* 仕切り用*/
 .content_item_sub {
-  width: 860px; height: 0px;
+  width: auto; max-width: 860px;
   margin: 0; padding: 0;
   border-radius: 10px;
   /* background-color: ; */
@@ -177,7 +188,7 @@ main {
 .content_item_0:hover {opacity: 0.7;}
 
 .content_item_1 {
-  width: 210px;
+  width: auto; max-width: 210px;
   margin: 0; padding: 0;
   border-radius: 10px 10px 30px 10px;
   background-color: #a8eed7;
@@ -186,14 +197,14 @@ main {
 .content_item_1:hover {transform: translateY(-4px); opacity: 0.7;}
 
 .content_item_2 {
-  width: 410px;
+  width: auto; max-width: 410px;
   margin: 0; padding: 0px 7px;
   border-radius: 10px 10px 30px 10px;
   background-color: #d2e9e1;
   }
 
 .content_item_3 {
-  width: 610px;
+  width: auto; max-width: 610px;
   margin: 0; padding: 0px 14px;
   border-radius: 10px 10px 30px 10px;
   background-color: #8dd4bd;
@@ -201,18 +212,8 @@ main {
 
 
 
-#sub_menu {
-  width: 110px;
-  margin: 5px 0px; padding: 0;
-  border-radius: 0 10px 10px 0;
-  background-color: #d5f7ff;
-  order: 1; /* 表示順番 */
-  }
-
-
-
 #topic {
-  width: 215px; min-width: 215px; /* 最小値 */
+  width: auto; max-width: 215px;
   margin: 5px 0;  padding: 5px;
   border-radius: 10px 0 0 10px;
   background-color: #d5f7ff;

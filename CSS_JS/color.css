@@ -1,22 +1,29 @@
 
 @charset "UTF-8";
 
+/* 画面幅が ~px以下のとき 指定カラムを非表示 */
+@media (max-width: 600px) {#floatingBanner h1 {display: none;}}
+/*  @media (max-width: 760px) {#sub_menu {display: none;}}
+    @media (max-width: 1150px) {#topic {display: none;}} */
+
 /* 画面幅に応じての設定*/
-@media screen and (max-width: 975px) {
-  body{width: 760px;} #floatingBanner{width: 760px;}}
+@media screen and (max-width: 759px) {
+    body{width: 650px;} #floatingBanner{width: 650px;}
+      h1 img {width: 100px; height: 50px;}}
+  
+  @media screen and (min-width: 760px) {
+    body{width: 760px;} #floatingBanner{width: 760px;}}
+  
+  @media screen and (min-width: 975px) {
+    body{width: 975px;} #floatingBanner{width: 975px;}}
+  
+  @media screen and (min-width: 1150px) {
+    body{width: 1200px;} #floatingBanner{width: 1200px;}}
 
-@media screen and (min-width: 975px) {
-  body{width: 975px;} #floatingBanner{width: 975px;}}
-
-@media screen and (min-width: 1150px) {
-  body{width: 1200px;} #floatingBanner{width: 1200px;}}
 
 
-
-body {margin: 0 auto;} /* 余白を無くす */
-
-img {margin: 5px; /* 外枠 */ padding: 0px; /* 内枠 */ 
-     border-radius: 10px; /* 角の丸み*/}
+img {margin: 5px; padding: 0px;
+     border-radius: 10px;}
 
 h1 {margin: 0;} /*余白を無くす*/
 h2 {margin: 0px 5px;}
@@ -26,21 +33,31 @@ p {margin: 5px; font-size: 20px; color: #583D3E;}
 a {text-decoration: none;} /* リンクの下線 */
 
 
-#header {
+
+html body {height: 100%; margin: 0 auto;}
+
+header {
     display: flex; /* 横配列 */  
     width: auto; height: 60px;
     margin: 0 auto; /* 中央表示 */
     border-radius: 0 0 10px 10px;
-    justify-content: ; /* 要素間スペース 均等配置 両端 詰め */
     background-color: #5abae6;
     }
   
+footer {
+    width: auto; height: auto;
+    margin: 15px 0 0 0; padding: 0;
+    border-radius: 10px 10px 0 0;
+    justify-content: space-between;
+    text-align:center; color: #fff;
+    background-color: #5abae6;
+    }
 
+
+/* フローティング バナー */
 .floating-banner {
     display: flex; /* 横配列 */
     width: auto; height: 60px;
-    min-width: 760px; /* main+navの最小幅 */
-    max-width: 1200px;
     border-radius: 0 0 10px 10px;  
     justify-content: space-between;
     pointer-events: none;  
@@ -74,6 +91,8 @@ a {text-decoration: none;} /* リンクの下線 */
 .floating-banner__close:hover {opacity: 1;}  
 .floating-banner_nav {display: flex;}
 
+
+/* ナビゲーション */
 .nav{margin-left: auto;}
 .nav a{color: #fff;}   
 .nav ul {
@@ -95,25 +114,14 @@ a {text-decoration: none;} /* リンクの下線 */
   
 
 
-footer {
-    height: auto; min-width: 755px; /* 最小値 */
-    margin: 15px 0 0 0; padding: 0;
-    border-radius: 10px 10px 0 0;
-    justify-content: space-between;
-    text-align:center; color: #fff;
-    background-color: #5abae6;
-    }
-
-
-
+/* 各 コンテナー */
 #container_all {
-    width: auto;
-    min-width: 760px;  /* 最小値 */
-    max-width: 1200px;
+    width: 100%; max-width: 100%;
     margin: 0 auto; /* 中央表示 */
-    /* background-color: #ece7e7; */
     color: #494541;
     }
+
+
 
 main {
     width: auto; height: auto;
@@ -121,6 +129,7 @@ main {
     border-radius: 5px;
     background-color: #d5f7ff;    
     }
+
 
 
 #color_palette {
@@ -195,9 +204,10 @@ main {
 
 
 
-#container_colorPicker {
+#container_color_picker {
+    display: inline-block; /* インライン要素<a><p><span>を ブロック */
     width: 135px; height: auto;
-    margin: 0px 10px; padding: 10px;    
+    margin: 10px; padding: 10px;
     font-weight: 700;
     border-radius: 10px;
     background: #5ABAE6;   
@@ -216,7 +226,5 @@ button {
     margin-left: 35px; padding: 0px;
     cursor: pointer;
     }
-
-
 
 
