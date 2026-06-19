@@ -19,6 +19,9 @@
 
 
 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
     margin: 5px; padding: 0px;
     border-radius: 10px;}
 
@@ -117,7 +120,7 @@ footer {
 /* 各 コンテナー */
 #container_index {
   display: inline-block; /* インライン要素<a><p><span>を ブロック */
-  width: 100%;
+  width: 100%; max-width: 100%;
   margin: 0 auto; /* 中央表示 */
   padding: 0px auto;
   border-radius: 8px;
@@ -141,7 +144,7 @@ footer {
 }
 
 #container_all {
-  width: 100%; max-width: 1200px;
+  width: 100%; max-width: 100%;
   margin: 0 auto; /* 中央表示 */
   background-color: #ece7e7;
   color: #494541; /* 文字色 */
