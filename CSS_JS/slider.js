@@ -5,7 +5,7 @@ const swiper = new Swiper(".swiper", {
         975: {slidesPerView: 4,},
         760: {slidesPerView: 3,},}, // 画像が重なる原因 *数字が合ってない場合あり
 
-    slidesPerView: 4,       // 同時に表示するスライド数 *設定値の2倍以上のスライドを用意
+    slidesPerView: ,       // 同時に表示するスライド数 *設定値の2倍以上のスライドを用意
     spaceBetween: 5,        // スライド間の余白
     speed: 5000,            // 移動速度(ms)
     loop: true,             // 無限ループ
