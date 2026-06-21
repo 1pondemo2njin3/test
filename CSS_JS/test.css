@@ -2,31 +2,32 @@
 @charset "UTF-8";
 
 /* 画面幅が ~px以下のとき 指定カラムを非表示 */
-@media (max-width: 600px) {#floatingBanner h1 {display: none;}}
-@media (max-width: 760px) {#sub_menu {display: none;}}
-@media (max-width: 1215px) {#topic {display: none;}}
+@media (max-width: 645px) {#floatingBanner h1 {display: none;}}
+@media (max-width: 775px) {#sub_menu {display: none;}}
+@media (max-width: 1220px) {#topic {display: none;}}
 
-/* 画面幅に応じての設定
-@media screen and (max-width: 759px) {
-  body{width: 650px;} #floatingBanner{width: 650px;}
+/* 画面幅に応じての設定 */
+@media screen and (max-width: 775px) {
+  body{width: 650px;} #floatingBanner{max-width: 650px;}
     h1 img {width: 100px; height: 50px;}}
 
-@media screen and (min-width: 760px) {
-  body{width: 760px;} #floatingBanner{width: 760px;}}
+@media screen and (min-width: 775px) {
+  body{max-width: 760px;} #floatingBanner{max-width: 760px;}}
 
-@media screen and (min-width: 975px) {
-  body{width: 975px;} #floatingBanner{width: 975px;}}
+@media screen and (min-width: 990px) {
+  body{max-width: 975px;} #floatingBanner{max-width: 975px;}}
 
-@media screen and (min-width: 1150px) {
-  body{width: 1200px;} #floatingBanner{width: 1200px;}} */
+@media screen and (min-width: 1220px) {
+  body{max-width: 1200px;} #floatingBanner{max-width: 1200px;}}
 
 
 
-img {
-    margin: 5px; padding: 0px;
+img {width: 100%; height: auto;
+    margin: 0px auto; padding: 0px;
     border-radius: 10px;}
 
 h1 {margin: 0;} /*余白を無くす*/
+h1 img {margin: 5px;}
 h2 {margin: 0px 5px;}
 
 a {text-decoration: none;} /* リンクの下線 */
@@ -146,7 +147,7 @@ footer {
 }
 
 #container_all {
-  width: 100%; max-width: 1200px;
+  width: 100%; max-width: 100%;
   margin: 0 auto; /* 中央表示 */
   background-color: #ece7e7;
   color: #494541; /* 文字色 */
@@ -200,8 +201,8 @@ main {
   }
 
 .content_item_1 {
-  width: auto; max-width: 210px;
-  margin: 0; padding: 0;
+  width: auto; max-width: ;
+  margin: 0; padding: 5px;
   border-radius: 10px 10px 30px 10px;
   box-shadow: 10px 10px 10px #49454133; /* 影 */
   background-color: #a8eed7;
@@ -209,16 +210,16 @@ main {
   }
 
 .content_item_2 {
-  width: auto; max-width: 410px;
-  margin: 0; padding: 0px 7px;
+  width: auto; max-width: px;
+  margin: 0; padding: 5px 12px;
   border-radius: 10px 10px 30px 10px;
   box-shadow: 10px 10px 10px #49454133; /* 影 */
   background-color: #d2e9e1;
   }
 
 .content_item_3 {
-  width: auto; max-width: 610px;
-  margin: 0; padding: 0px 14px;
+  width: auto; max-width: px;
+  margin: 0; padding: 5px 20px;
   border-radius: 10px 10px 30px 10px;
   box-shadow: 10px 10px 10px #49454133; /* 影 */
   background-color: #8dd4bd;
