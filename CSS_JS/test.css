@@ -3,13 +3,17 @@
 
 /* 画面幅が ~px以下のとき 指定カラムを非表示 */
 @media (max-width: 645px) {#floatingBanner h1 {display: none;}}
-@media (max-width: 775px) {#sub_menu {display: none;}}
+@media (max-width: 774px) {#sub_menu {display: none;}}
 @media (max-width: 1220px) {#topic {display: none;}}
 
 /* 画面幅に応じての設定 */
-@media screen and (max-width: 775px) {
-  body{width: 650px;} #floatingBanner{max-width: 650px;}
-    h1 img {width: 100px; height: 50px;}}
+@media screen and (max-width: 665px) {
+  body{min-width: 650px;} #floatingBanner{min-width: 650px;}
+  h1 img {width: 100px; height: 50px;}}
+
+@media screen and (min-width: 665px) {
+  body{max-width: 650px;} #floatingBanner{min-width: 650px;}
+  h1 img {width: 100px; height: 50px;}}
 
 @media screen and (min-width: 775px) {
   body{max-width: 760px;} #floatingBanner{max-width: 760px;}}
@@ -22,7 +26,8 @@
 
 
 
-img {width: 100%; height: auto;
+img {
+    width: 100%; height: auto;
     margin: 0px auto; padding: 0px;
     border-radius: 10px;}
 
@@ -40,7 +45,7 @@ p {margin: 0px 5px; font-size: 20px; color: #384A86;}
 
 
 
-html body {height: 100%; margin: 0 auto;}
+html body {width: 100%; height: 100%; margin: 0 auto;}
 
 header {
   display: flex; /* 横配列 */
@@ -210,7 +215,7 @@ main {
   }
 
 .content_item_2 {
-  width: auto; max-width: px;
+  width: auto; max-width: ;
   margin: 0; padding: 5px 12px;
   border-radius: 10px 10px 30px 10px;
   box-shadow: 10px 10px 10px #49454133; /* 影 */
@@ -218,7 +223,7 @@ main {
   }
 
 .content_item_3 {
-  width: auto; max-width: px;
+  width: auto; max-width: ;
   margin: 0; padding: 5px 20px;
   border-radius: 10px 10px 30px 10px;
   box-shadow: 10px 10px 10px #49454133; /* 影 */
@@ -238,6 +243,7 @@ main {
   width: auto; height: auto;
   margin: 0; padding: 0;
   border-radius: 10px;
+  justify-content: space-between;
   }
 
 
