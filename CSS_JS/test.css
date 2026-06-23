@@ -125,32 +125,6 @@ footer {
 
 
 /* 各 コンテナー */
-#container_index {
-  display: inline-block; /* インライン要素<a><p><span>を ブロック */
-  width: 100%; height: ;
-  margin: 0 auto; /* 中央表示 */
-  padding: 0px auto;
-  border-radius: 8px;
-  /* background-color: #5abae6; */
-  }
-
-#index_p {
-  width: auto; max-width: 320px;
-  margin: 50px auto;
-  padding: 30px;
-  border-radius: 10px;
-  background-color: #d5f7ff;
-  text-align: center;
-}
-
-#index_button {
-  width: 110px;
-  margin: 30px auto; /* 中央表示 */
-  border-radius: 5px 30px 30px 5px;
-  background-color: #d5f7ff;
-  text-align: center; 
-}
-
 #container_all {
   width: 100%; max-width: 100%;
   margin: 0 auto; /* 中央表示 */
