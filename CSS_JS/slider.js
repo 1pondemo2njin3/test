@@ -7,7 +7,7 @@ const swiper = new Swiper(".swiper", {
 
     slidesPerView: 3,       // 同時に表示するスライド数 *設定値の2倍以上のスライドを用意
     spaceBetween: 3,        // スライド間の余白
-    speed: 5000,            // 移動速度(ms)
+    speed: 9000,            // 移動速度(ms)
     loop: true,             // 無限ループ
     autoplay: {delay: 0,},  // 途切れない動きに必須
     });
