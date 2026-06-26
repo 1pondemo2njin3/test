@@ -1,16 +1,16 @@
 
-@media screen and (max-width: 760px) {#top_space {width: 640px;}}
-@media screen and (min-width: 760px) {#top_space {width: 640px;}}
-@media screen and (min-width: 990px) {#top_space {width: 860px;}}
+@media screen and (max-width: 640px)  {#top_space {width: 620px;}}
+@media screen and (min-width: 760px)  {#top_space {width: 620px;}}
+@media screen and (min-width: 990px)  {#top_space {width: 860px;}}
 @media screen and (min-width: 1220px) {#top_space {width: 1080px;}}
 
 /* スライダー全体 */
 .swiper {
-  width: auto; height: 100%;
-  border-radius: 10px;
-  background-color: #fff;
-  overflow: hidden; /* はみ出し防止 */
-}
+    width: auto; height: auto;
+    border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden; /* はみ出し防止 */
+    }
 
 /* スライドの動きを一定にする */
 .swiper-wrapper {transition-timing-function: linear;}
