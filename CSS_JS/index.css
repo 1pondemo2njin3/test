@@ -1,20 +1,21 @@
 
 @charset "UTF-8";
 
-p   {margin: 0px 5px; font-size: 16px; color: #384A86;}
+p   {margin: 0px 5px; font-size: 14px; color: #384A86;}
 
 
 
-html body {width: 100%; height: 100%; margin: 0 auto;}
+html body {
+  width: 100%; height: 100%; margin: 0 auto;
+  background-color: #5abae6;}
 
 
 /* 各 コンテナー */
 #container_index {
-    width: 100%; height: ;
+    max-width: 300px; height: auto;
     margin: 0 auto; /* 中央寄せ */
     padding: 0px auto;
-    border-radius: 8px;
-    /* background-color: #5abae6; */
+    border-radius: 8px; 
     }
   
   #index_p {
