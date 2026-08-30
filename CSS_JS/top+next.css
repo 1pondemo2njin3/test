@@ -67,7 +67,6 @@ footer {
     background-color: #64C3C1;
     }
 
-
 /* フローティング バナー */  
 .floating-banner {
     display: flex; /* 横配列 */
@@ -171,6 +170,11 @@ main {
     border-radius: 10px; /* 角丸 */
     order: 2;
     }
+
+
+
+#scroll-to-top {margin-left: auto;}
+
 
 
 /* 仕切り用*/

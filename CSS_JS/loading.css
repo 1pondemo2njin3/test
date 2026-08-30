@@ -19,7 +19,7 @@
   user-select:none;
   cursor:default;
   
-  &.loaded {opacity: 0; visibility: hidden;}
+  &.loaded {opacity: 0; visibility: hidden; /* 非表示 */}
   }
 
 #load div {
