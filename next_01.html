@@ -9,12 +9,15 @@
     <meta name="description" content="トップページ" /> <!-- ページの説明 -->
     <meta name="format-detection" content="telephone=no">
 
-    <link rel="stylesheet" href="CSS_JS/top+next.css">
     <link rel="stylesheet" href="CSS_JS/button.css">
     <link rel="stylesheet" href="CSS_JS/slider.css">
+    <link rel="stylesheet" href="CSS_JS/loading.css">
+    <link rel="stylesheet" href="CSS_JS/top+next.css">    
+    <script src="CSS_JS/scroll.js" defer></script>
     <script src="CSS_JS/color.js" defer></script>
     <script src="CSS_JS/floatingBanner.js" defer></script>
     <script src="CSS_JS/slider.js" defer></script>
+    <script src="CSS_JS/loading.js" defer></script>
 
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
@@ -25,6 +28,11 @@
 <body>
 
 <div id="container_all">
+
+    <div id="load">
+        <div>L</div> <div>o</div> <div>a</div> <div>d</div>
+        <div>ing</div>
+    </div>
     
     <header>
         <h1>
@@ -35,9 +43,9 @@
         <nav class="nav">
             <ul>
             <li><a href="https://1pondemo2njin3.github.io/test/top.html">トップ</a></li>
-            <li><a href="">カテゴリ2</a></li>
-            <li><a href="">カテゴリ3</a></li>
-            <li><a href="">カテゴリ4</a></li>
+            <li><a>カテゴリ2</a></li>
+            <li><a>カテゴリ3</a></li>
+            <li><a>カテゴリ4</a></li>
             <li><a href="https://1pondemo2njin3.github.io/test/color.html">パレット</a></li>
             </ul>
         </nav> 
@@ -53,9 +61,9 @@
         <nav class="nav">
             <ul>
             <li><a href="https://1pondemo2njin3.github.io/test/top.html">トップ</a></li>
-            <li><a href="">カテゴリ2</a></li>
-            <li><a href="">カテゴリ3</a></li>
-            <li><a href="">カテゴリ4</a></li>
+            <li><a>カテゴリ2</a></li>
+            <li><a>カテゴリ3</a></li>
+            <li><a>カテゴリ4</a></li>
             <li><a href="https://1pondemo2njin3.github.io/test/color.html">パレット</a></li>
             </ul>
         </nav>
@@ -280,6 +288,12 @@
                 <p>お寿司</p>
             </article>
             <article class="content_item_sub"></article>
+
+        <button id="scroll-to-top" class="button-06_2">
+            <span class="label-default">上に戻る</span>
+            <span class="label-hover">戻る</span>
+        </button>
+
         </main>
 
 

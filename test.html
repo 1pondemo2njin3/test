@@ -9,24 +9,9 @@
     <meta name="description" content="テストページ"> <!-- ページの説明 -->
     <meta name="format-detection" content="telephone=no">
 
-    <!-- ファビコン または アイコン設定
-    <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href=""> -->
-
-    <!-- SNSなどで シェアされた時に表示される情報
-    <meta property="og:site_name" content="サイト名">
-    <meta property="og:url" content="URL">
-    <meta property="og:type" content="website or article">
-    <meta property="og:title" content="ページのタイトル">
-    <meta property="og:description" content="ページの説明"> -->
-   
-    <!-- 検索結果に表示させたくないページの指定
-    <meta name="robots" content="noindex,nofollow"> -->
-      
-    <link rel="stylesheet" href="CSS_JS/test.css">
     <link rel="stylesheet" href="CSS_JS/button.css">
     <link rel="stylesheet" href="CSS_JS/slider.css">
+    <link rel="stylesheet" href="CSS_JS/test.css">    
     <script src="CSS_JS/color.js" defer></script>
     <script src="CSS_JS/floatingBanner.js" defer></script>
     <script src="CSS_JS/slider.js" defer></script>
@@ -47,8 +32,8 @@
             <li><a href="https://1pondemo2njin3.github.io/test/top.html">次のページ</a></li>
             <li><a href="https://1pondemo2njin3.github.io/test/top.html">次のページ</a></li>
             <li><a href="https://1pondemo2njin3.github.io/test/top.html">次のページ</a></li>
-            <li><a href="">カテゴリ4</a></li>
-            <li><a href="">カテゴリ5</a></li>
+            <li><a>カテゴリ4</a></li>
+            <li><a>カテゴリ5</a></li>
             </ul>
         </nav> 
     </header>
@@ -66,8 +51,8 @@
             <li><a href="https://1pondemo2njin3.github.io/test/top.html">次のページ</a></li>
             <li><a href="https://1pondemo2njin3.github.io/test/top.html">次のページ</a></li>
             <li><a href="https://1pondemo2njin3.github.io/test/top.html">次のページ</a></li>
-            <li><a href="">カテゴリ4</a></li>
-            <li><a href="">カテゴリ5</a></li>
+            <li><a>カテゴリ4</a></li>
+            <li><a>カテゴリ5</a></li>
             </ul>
         </nav>
         <span class="floating-banner__close" id="bannerClose">閉</span>
@@ -80,9 +65,11 @@
    
     <div id="container_main">
         <aside id="sub_menu">
-            <button class="button-01" disabled><span>詳しく見る</span></button> <!-- disabled 非クリック -->
-            <button class="button-02" disabled><span>もっと見る</span></button>
-            <button class="button-03" disabled><span>今すぐ試す</span></button>
+            <button class="button-01" onclick="location.href='https://1pondemo2njin3.github.io/test/top.html';">
+            <span>詳しく見る</span></button>
+            <button class="button-02" onclick="location.href='https://1pondemo2njin3.github.io/test/top.html';">
+            <span>もっと見る</span></button>
+            <button class="button-03" disabled><span>今すぐ試す</span></button> <!-- disabled 非クリック -->
             <button class="button-05" disabled><span>次へ</span></button>
             <button class="button-06" disabled>
                 <span class="label-default">購入する</span>
