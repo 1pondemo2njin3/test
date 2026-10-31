@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,">
+    <title>商品ページ</title>
+
+    <meta name="description" content="各 商品ページ" /> <!-- ページの説明 -->
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="CSS_JS/button.css">
+    <link rel="stylesheet" href="CSS_JS/slider.css">
+    <link rel="stylesheet" href="CSS_JS/item.css">
+    <script src="CSS_JS/scroll.js" defer></script>
+    <script src="CSS_JS/color.js" defer></script>
+    <script src="CSS_JS/floatingBanner.js" defer></script>
+    <script src="CSS_JS/slider.js" defer></script>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- Swiper JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+
+<div id="container_all">
+
+    <header>
+        <h1>
+            <a href="test.html">
+            <img src="Images/00_s.jpg" alt="ロゴマーク"></a>
+        </h1>  
+
+        <nav class="nav">
+            <ul>
+            <li><a href="https://1pondemo2njin3.github.io/test/top.html">トップ</a></li>
+            <li><a href="next_01.html">メニュー</a></li>
+            <li><a>カテゴリ3</a></li>
+            <li><a>カテゴリ4</a></li>
+            <li><a href="color.html">パレット</a></li>
+            </ul>
+        </nav> 
+    </header>
+
+    <div class="floating-banner" id="floatingBanner">
+        <h1>
+            <a href="test.html">
+            <img src="Images/00_s.jpg" alt="ロゴマーク"></a>
+        </h1>
+
+        <div class="floating-banner_nav">
+        <nav class="nav">
+            <ul>
+            <li><a href="https://1pondemo2njin3.github.io/test/top.html">トップ</a></li>
+            <li><a href="next_01.html">メニュー</a></li>
+            <li><a>カテゴリ3</a></li>
+            <li><a>カテゴリ4</a></li>
+            <li><a href="https://1pondemo2njin3.github.io/test/color.html">パレット</a></li>
+            </ul>
+            </nav>
+            <span class="floating-banner__close" id="bannerClose">閉</span>
+        </div>
+
+    </div>
+
+
+    <section id="top_space">
+        <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="Images/AI_m/01_00_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/01_03_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/01_05_m.jpg" alt=""></div>            
+            <div class="swiper-slide"><img src="Images/AI_m/02_00_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/02_05_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/02_06_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/03_00_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/03_01_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/03_02_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/04_00_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/05_00_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/05_01_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/05_02_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/06_00_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/06_01s_m.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="Images/AI_m/06_03_m.jpg" alt=""></div>
+        </div>
+        </div>
+    </section>
+
+    <div id="container_main">
+        <aside id="sub_menu">
+            <button class="button-01" onclick="location.href='next_01.html';">
+            <span>詳しく見る</span></button>
+            <button class="button-02" onclick="location.href='next_01.html';">
+            <span>もっと見る</span></button>
+            <button class="button-03" disabled><span>今すぐ試す</span></button> <!-- disabled 非クリック -->
+            <button class="button-05" disabled><span>次へ</span></button>
+            <button class="button-06" disabled>
+                <span class="label-default">購入する</span>
+                <span class="label-hover">購入！</span></button>
+            <button class="button-07" disabled>
+                <span class="flip">
+                    <span class="front">表</span>
+                    <span class="back">裏</span>
+                </span>
+            </button>
+            <button class="button-10" disabled><span>発見！</span></button>
+        </aside>
+
+        <main>
+            
+            <article class="content_item_1">
+                <div><img src="Images/AI_m/01_01_l.jpg" alt=""/></div>
+                <div class="box_item_1">
+                <p>【説明】<br>
+                    フランスパンとは 日本での呼称で 小麦粉･水･塩･酵母のみを基本材料とする 
+                    フランス発祥の硬いパンの総称で 代表例はバゲットやバタールです</p>
+                <p>【材料】<br>
+                    小麦粉(準強力粉) 水 塩 酵母(ﾄﾞﾗｲｲｰｽﾄ)</p>
+                    <p>【主な種類】<br>
+                    バゲット&emsp;最も代表的な細長い棒状のパン<br>
+                    バタール&emsp;バゲットより短く太い形<br>
+                    ブール&emsp;&emsp;丸い形でクラムが多く柔らかめ</p>
+                </div>
+                <div id="item_1-2"></div>
+            </article>
+            
+            
+            <article class="content_item_1">
+                <div><img src="Images/AI_m/01_02_l.jpg" alt=""/></div>
+                <div class="box_item_1">
+                <p>【説明】<br>
+                    クロワッサンは フランス語で ｢三日月｣を意味する croissant に由来し 
+                    バターを折り込んだ層状の生地を焼き上げたサクサク食感が特徴のフランス発祥のパンです
+                <p>【材料】<br>
+                    小麦粉(準強力粉) 水 塩 酵母(ﾄﾞﾗｲｲｰｽﾄ)
+                    砂糖 無塩バター 牛乳 卵黄(つや出し用)</p>
+                </div>
+                <div id="item_1-3"></div>
+            </article>
+
+            <article class="content_item_1">
+                <div><img src="Images/AI_m/01_03_l.jpg" alt=""/></div>
+                <div class="box_item_1">
+                <p>【説明】<br>
+                    メロンパンは 日本発祥の菓子パンで パン生地の上に甘いビスケット生地をのせて焼き 表面に格子模様があるのが特徴です</p>
+                <p>【材料】<br>
+                    パン生地用<br>小麦粉(強力粉) 水(牛乳) 塩 酵母(ﾄﾞﾗｲｲｰｽﾄ) 砂糖 バター 卵</p>
+                <p>クッキー生地用<br>小麦粉(薄力粉) 砂糖 バター 卵</p>
+                </div>
+                <div id="item_1-4"></div>
+            </article>
+
+            <article class="content_item_1">
+                <div><img src="Images/AI_m/01_04_l.jpg" alt=""/></div>
+                <div class="box_item_1">
+                <p>【説明】<br>
+                    あんパン(餡パン)とは 小豆餡を中に詰めた日本発祥の丸い菓子パンです</p>
+                <p>【材料】<br>
+                    パン生地用<br>小麦粉(強力粉) 牛乳 塩 酵母(ﾄﾞﾗｲｲｰｽﾄ) 砂糖 無塩バター 卵</p>
+                    あん(餡)用<br>小豆餡(こしあん つぶあん 白あん 等)</p>
+                </div>
+                <div id="item_1-5"></div>
+            </article>
+
+            <article class="content_item_1">
+                <div><img src="Images/AI_m/01_05_l.jpg" alt=""/></div>
+                <div class="box_item_1">
+                <p>【説明】<br>
+                    ドーナツは 小麦粉を主成分とした生地を油で揚げたり焼いたりして作る甘い洋菓子です</p>
+                <p>【材料】<br>
+                    小麦粉(薄力粉 または強力粉) 砂糖 卵 牛乳 バター ベーキングパウダー(ﾄﾞﾗｲｲｰｽﾄ) 揚げ油</p>
+                </div>
+            </article>
+
+            <button id="scroll-to-top" class="button-06_2">
+                <span class="label-default">上に戻る</span>
+                <span class="label-hover">戻る</span>
+            </button>
+
+        </main>
+
+
+        <aside id="topic">
+            <div class="topic_item">
+            <p style="text-align:center">予備スペース</p>
+            <button class="color-btn color_F8DB55"
+             onclick="location.href='color.html';">F8DB55</button>
+            <button class="color-btn color_F57D38"
+             onclick="location.href='color.html';">F57D38</button>
+            <button class="color-btn color_EA504A"
+             onclick="location.href='color.html';">EA504A</button>
+            <button class="color-btn color_FA7395"
+             onclick="location.href='color.html';">FA7395</button>
+            <button class="color-btn color_EE6DCB" 
+             onclick="location.href='color.html';" disabled>EE6DCB</button>
+            <button class="color-btn color_B03D81" disabled>B03D81</button>
+            <button class="color-btn color_75358C" disabled>75358C</button>
+            <button class="color-btn color_384A86" disabled>384A86</button>
+            <button class="color-btn color_3376D2" disabled>3376D2</button>
+            <button class="color-btn color_69A9E9" disabled>69A9E9</button>        
+            <button class="color-btn color_5ABAE6" disabled>5ABAE6</button>
+            <button class="color-btn color_00B5BE" disabled>00B5BE</button>        
+            <button class="color-btn color_64C3C1" disabled>64C3C1</button>
+            <button class="color-btn color_4BD18C" disabled>4BD18C</button>
+            <button class="color-btn color_1C7763" disabled>1C7763</button>
+            <button class="color-btn color_ECE7E7" disabled>ECE7E7</button>
+            <button class="color-btn color_494541" disabled>494541</button>
+            <button class="color-btn color_AF7E51" disabled>AF7E51</button>
+            </div>
+        </aside>
+
+    </div>
+
+
+    <footer>
+        <p>このページはテストページであり <br>情報は提供していません<br>
+           This page is a test page <br>and does not provide any information.</p>
+    </footer>
+
+
+
+</body>
+</html>
