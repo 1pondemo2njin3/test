@@ -16,7 +16,7 @@
 
 @media screen and (min-width: 775px) {
     body{max-width: 760px;} #floatingBanner{max-width: 760px;}
-    .content_item_0 {max-width: 300px; margin-left: 5px;}}
+    .content_item_0 {max-width: 300px; margin-left: 10px;}}
 
 @media screen and (min-width: 990px) {
     body{max-width: 975px;} #floatingBanner{max-width: 975px;}
@@ -37,7 +37,7 @@ h1  {margin: 0;} /*余白を無くす*/
 h1 img {margin: 5px;}
 h2 {margin: 0px 5px;}
 
-p   {margin: 0px 5px;} /*余白を無くす*/
+p   {margin: 5px 5px;} /*余白を無くす*/
 
 a {text-decoration: none;} /* リンクの下線 */
 a:link    { color: #00B5BE;}   /* 通常のリンク */
@@ -128,7 +128,7 @@ footer {
 
 /* 各 コンテナー */
 #container_all {
-    width: 100%; max-width: 1200px;
+    width: 100%;
     margin: 0 auto; /* 中央寄せ */
     /* background-color: #ece7e7; */
     color: #494541; /* 文字色 */
@@ -137,7 +137,7 @@ footer {
 #container_main {
     display: flex;
     width: auto;
-    margin: 0 auto; 
+    margin: 0 auto;
     justify-content: flex-start;
     }
  
@@ -155,7 +155,7 @@ footer {
 
 #sub_menu {
     width: auto; max-width: 110px;
-    margin: 0 5px 0 0;
+    margin-right:5px;
     border-radius: 0 10px 10px 0;
     background-color: #d5f7ff;
     order: 1; /* 表示順番 */
@@ -166,10 +166,18 @@ footer {
 main {
     display: flex;
     flex-wrap: wrap; /* 画面が狭い場合は折り返して表示 */
+    width: 100%; max-width: 855px;
     gap: 5px; /* 間の幅 */
     border-radius: 10px; /* 角丸 */
+    /* background-color: #d5f7ff; */
     order: 2;
     }
+
+
+    
+article p {
+    background-color: rgb(255, 255, 255 ,70%);
+    border-radius: 10px 10px 20px 10px;}
 
 
 
@@ -179,7 +187,7 @@ main {
 
 /* 仕切り用*/
 .content_item_sub {
-    width: 100%; max-width: 860px;
+    width: 100%; max-width: 855px;
     height: 0px;
     border-radius: 10px;
     /* background-color: ; */
@@ -200,7 +208,6 @@ main {
 .content_item_1-4:hover {transform: translateY(-4px); opacity: 0.7;}
 
 .content_item_1-1 {
-    flex: 0 1 auto;
     padding: 5px;
     border-radius: 10px 10px 30px 10px;
     background-color: #a8eed7;
@@ -209,25 +216,22 @@ main {
     }
 
 .content_item_1-2 {
-    flex: 0 1 auto;
     padding: 5px;
     border-radius: 10px 10px 30px 10px;
     background-color: #FFDEF9;
     text-align:center;
-    font-size: 25px; color: #FA7395;
+    font-size: 25px; color: #E73472;
     }
 
 .content_item_1-3 {
-    flex: 0 1 auto;
     padding: 5px;
     border-radius: 10px 10px 30px 10px;
     background-color: #C8D8EB;
     text-align:center;
-    font-size: 25px; color: #5ABAE6;
+    font-size: 25px; color: #3376D2;
     }
 
 .content_item_1-4 {
-    flex: 0 1 auto;
     padding: 5px;
     border-radius: 10px 10px 30px 10px;
     background-color: #FFDA93;
@@ -236,14 +240,12 @@ main {
     }
 
 .content_item_2 {
-    flex: 0 1 auto;
     padding: 5px 12px;
     border-radius: 10px 10px 30px 10px;
     background-color: #d2e9e1;
     }
 
 .content_item_3 {
-    flex: 0 1 auto;
     padding: 5px 20px;
     border-radius: 10px 10px 30px 10px;
     background-color: #8dd4bd;
@@ -253,7 +255,7 @@ main {
 
 #topic {
     width: auto; max-width: 215px;
-    padding: 5px;
+    margin-left: 5px; padding: 5px;
     border-radius: 10px 0 0 10px;
     background-color: #d5f7ff;
     order: 3;
