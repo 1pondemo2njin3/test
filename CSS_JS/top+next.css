@@ -3,7 +3,7 @@
 
 /* 画面幅が ~px以下のとき 指定カラムを非表示 */
 @media (max-width: 774px)   {#sub_menu {display: none;}}
-@media (max-width: 1220px)  {#topic {display: none;}}
+@media (max-width: 1219px)  {#topic {display: none;}}
 
 /* 画面幅に応じての設定 */
 @media screen and (max-width: 655px) {

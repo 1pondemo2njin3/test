@@ -1,7 +1,7 @@
 
 @charset "UTF-8";
 
-p   {margin: 0px 5px; font-size: 14px; color: #384A86;}
+p   {margin: 0px; font-size: clamp(20px, 3vw, 100px); color: #384A86;}
 
 
 
@@ -12,16 +12,16 @@ html body {
 
 /* 各 コンテナー */
 #container_index {
-    max-width: 300px; height: auto;
-    margin: 0 auto; /* 中央寄せ */
-    padding: 0px auto;
-    border-radius: 8px; 
-    }
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    /* ボックスをど真ん中に配置 */
+  }
   
   #index_p {
-    width: auto; max-width: 380px;
-    margin: 50px auto;
-    padding: 30px;
+    min-width: 300px;
+    margin: 0px auto;
+    padding: 10px;
     border-radius: 10px;
     background-color: #d5f7ff;
     text-align: center;
@@ -29,7 +29,7 @@ html body {
   
   #index_button {
     width: 110px;
-    margin: 30px auto;
+    margin: 30px auto 0px;
     border-radius: 5px 30px 30px 5px;
     background-color: #d5f7ff;
     text-align: center; 
