@@ -3,13 +3,10 @@
 
 /* 画面幅が ~px以下のとき 指定カラムを非表示 */
 @media (max-width: 774px)   {#sub_menu {display: none;}}
-@media (max-width: 1220px)  {#topic {display: none;}}
+@media (max-width: 1219px)  {#topic {display: none;}}
 
 /* 画面幅に応じての設定 */
-@media screen and (max-width: 655px) {
-    body{min-width: 640px;} #floatingBanner{min-width: 640px;}}
-
-@media screen and (min-width: 655px) {
+@media screen and (max-width: 774px) {
     body{max-width: 640px;} #floatingBanner{max-width: 640px;}}
 
 @media screen and (min-width: 775px) {
@@ -33,13 +30,13 @@ h1  {margin: 0;} /*余白を無くす*/
 h1 img {margin: 5px;}
 h2  {margin: 0px 5px;}
 
+p   {margin: 0px 5px; font-size: 20px; color: #384A86;}
+
 a         {text-decoration: none;} /* リンクの下線 */
 a:link    { color: #00B5BE;}   /* 通常のリンク */
 a:visited { color: #75358C;} /* 訪問済み */
 a:hover   { color: #b03d81;}    /* マウスオーバー */
 /* a:active  { color: ;} クリック中 */
-
-p   {margin: 0px 5px; font-size: 20px; color: #384A86;}
 
 
 
@@ -47,14 +44,16 @@ html body {width: 100%; height: 100%; margin: 0 auto;}
 
 header {
     display: flex; /* 横配列 */
-    width: 100%; height: 60px;
+    width: 100%; min-width: 640px;
+    height: 60px;
     margin: 0px auto 5px;
     border-radius: 0 0 10px 10px; /* 角丸 */
     background-color: #5abae6;
     }
 
 footer {
-    width: 100%; height: auto;
+    width: 100%; min-width: 640px;
+    height: auto;
     margin: 5px auto 0px;
     border-radius: 10px 10px 0 0;
     justify-content: space-between;
@@ -66,7 +65,8 @@ footer {
 /* フローティング バナー */
 .floating-banner {
     display: flex; /* 横配列 */
-    width: 100%; height: 60px;
+    width: 100%; min-width: 640px;
+    height: 60px;
     border-radius: 0 0 10px 10px;  
     justify-content: space-between;
     pointer-events: none;  
@@ -123,7 +123,11 @@ footer {
 
 /* 各 コンテナー */
 #container_all {
-    width: 100%; max-width: 1200px;
+    display:flex;
+    flex-direction:column; /* 子要素を上から下に縦に並べる */
+    min-height:100vh; /* 表示領域 100%を下回らない*/
+    
+    width: 100%; min-width: 640px;
     margin: 0 auto; /* 中央寄せ */
     background-color: #ece7e7;
     color: #494541; /* 文字色 */
@@ -139,7 +143,7 @@ footer {
 
 
 #top_space {
-    width: auto; height: 210px;
+    width: 600px; height: 210px;
     margin: 0px auto 5px; padding: 5px;
     border-radius: 10px;
     background-color: #d5f7ff;
@@ -161,6 +165,7 @@ footer {
 main {
     display: flex;
     flex-wrap: wrap; /* 画面が狭い場合は折り返して表示 */
+    min-width: 640px; max-width: 855px;
     gap: 5px; /* 間の幅 */
     border-radius: 10px;
     order: 2;
@@ -199,7 +204,7 @@ main {
     
 #topic {
     width: auto; max-width: 215px;
-    padding: 5px;
+    margin-left: 5px; padding: 5px;
     border-radius: 10px 0 0 10px;
     background-color: #d5f7ff;
     order: 3;
